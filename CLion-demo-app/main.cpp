@@ -38,6 +38,38 @@ static QWidget* createButtonWidget(QString content, int yPosition, QWidget* pare
 }
 
 
+//Fonction de l'exercice 2
+
+static QWidget* createLineWidget(QString content, QWidget* parent = nullptr) {
+    QWidget* widget = new QWidget(parent);
+    QHBoxLayout* qhBoxLayout = new QHBoxLayout(widget);
+    QLabel* label = new QLabel(content, widget);
+    QLineEdit* nameLineEdit = new QLineEdit(widget);
+    qhBoxLayout->addWidget(label);
+    qhBoxLayout->addWidget(nameLineEdit);
+    return widget;
+}
+
+static QWidget* createSpinBoxWidget(QString content,QWidget* parent = nullptr) {
+    QWidget* widget = new QWidget(parent);
+    QHBoxLayout* qhBoxLayout = new QHBoxLayout(widget);
+    QLabel* label = new QLabel(content, widget);
+    QSpinBox* spinBox = new QSpinBox(widget);
+    qhBoxLayout->addWidget(label);
+    qhBoxLayout->addWidget(spinBox);
+    return widget;
+}
+
+static QWidget* createButtonWidget(QString content, QWidget* parent = nullptr) {
+    QWidget* widget = new QWidget(parent);
+    QHBoxLayout* qhBoxLayout = new QHBoxLayout(widget);
+    QPushButton* button = new QPushButton(content, widget);
+    qhBoxLayout->addWidget(button);
+    return widget;
+}
+
+
+
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     //QWidget widget;
@@ -113,11 +145,25 @@ int main(int argc, char *argv[]) {
 //    qGridLayout.setHorizontalSpacing(0);
 
     //QFormLayout
-    QFormLayout formLayout(&mainWidget);
-    QLineEdit edit(&mainWidget);
-    formLayout.addRow("label", &edit);
-    QPushButton button("b", &mainWidget);
-    formLayout.addWidget(&button);
+//    QFormLayout formLayout(&mainWidget);
+//    QLineEdit edit(&mainWidget);
+//    formLayout.addRow("label", &edit);
+//    QPushButton button("b", &mainWidget);
+//    formLayout.addWidget(&button);
+//    mainWidget.show();
+
+    //Correction Exercice 2
+    QVBoxLayout qvBoxLayout(&mainWidget);
+    QWidget* firstNameWidget = createLineWidget("First Name", &mainWidget);
+    QWidget* lastNameWidget = createLineWidget("Last Name", &mainWidget);
+    QWidget* phoneWidget = createLineWidget("Phone ", &mainWidget);
+    QWidget* ageWidget = createSpinBoxWidget("Age", &mainWidget);
+    QWidget* buttonWidget = createButtonWidget("Confirm", &mainWidget);
+    qvBoxLayout.addWidget(firstNameWidget);
+    qvBoxLayout.addWidget(lastNameWidget);
+    qvBoxLayout.addWidget(phoneWidget);
+    qvBoxLayout.addWidget(ageWidget);
+    qvBoxLayout.addWidget(buttonWidget);
     mainWidget.show();
     return QApplication::exec();
 }
