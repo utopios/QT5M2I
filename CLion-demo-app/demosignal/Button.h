@@ -12,7 +12,8 @@ class Button: public QObject{
     Q_OBJECT
 public:
     void click() {emit clicked();}
-    signals:
+
+signals:
     void clicked();
 };
 
