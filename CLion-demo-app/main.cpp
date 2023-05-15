@@ -153,17 +153,30 @@ int main(int argc, char *argv[]) {
 //    mainWidget.show();
 
     //Correction Exercice 2
-    QVBoxLayout qvBoxLayout(&mainWidget);
-    QWidget* firstNameWidget = createLineWidget("First Name", &mainWidget);
-    QWidget* lastNameWidget = createLineWidget("Last Name", &mainWidget);
-    QWidget* phoneWidget = createLineWidget("Phone ", &mainWidget);
-    QWidget* ageWidget = createSpinBoxWidget("Age", &mainWidget);
+    //Avec VBox et HBox
+//    QVBoxLayout qvBoxLayout(&mainWidget);
+//    QWidget* firstNameWidget = createLineWidget("First Name", &mainWidget);
+//    QWidget* lastNameWidget = createLineWidget("Last Name", &mainWidget);
+//    QWidget* phoneWidget = createLineWidget("Phone ", &mainWidget);
+//    QWidget* ageWidget = createSpinBoxWidget("Age", &mainWidget);
+//    QWidget* buttonWidget = createButtonWidget("Confirm", &mainWidget);
+//    qvBoxLayout.addWidget(firstNameWidget);
+//    qvBoxLayout.addWidget(lastNameWidget);
+//    qvBoxLayout.addWidget(phoneWidget);
+//    qvBoxLayout.addWidget(ageWidget);
+//    qvBoxLayout.addWidget(buttonWidget);
+
+    QFormLayout formLayout(&mainWidget);
+    QLineEdit* firstNameLineEdit = new QLineEdit(&mainWidget);
+    QLineEdit* lastNameLineEdit = new QLineEdit(&mainWidget);
+    QLineEdit* phoneLineEdit = new QLineEdit(&mainWidget);
+    QSpinBox* ageSpinBox = new QSpinBox(&mainWidget);
     QWidget* buttonWidget = createButtonWidget("Confirm", &mainWidget);
-    qvBoxLayout.addWidget(firstNameWidget);
-    qvBoxLayout.addWidget(lastNameWidget);
-    qvBoxLayout.addWidget(phoneWidget);
-    qvBoxLayout.addWidget(ageWidget);
-    qvBoxLayout.addWidget(buttonWidget);
+    formLayout.addRow("First name", firstNameLineEdit);
+    formLayout.addRow("last name", lastNameLineEdit);
+    formLayout.addRow("phone", phoneLineEdit);
+    formLayout.addRow("age", ageSpinBox);
+    formLayout.addWidget(buttonWidget);
     mainWidget.show();
     return QApplication::exec();
 }
