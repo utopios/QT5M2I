@@ -4,6 +4,7 @@
 #include <QLineEdit>
 #include <QSpinBox>
 #include <QHBoxLayout>
+#include <QFormLayout>
 
 //Fonction de l'exercice 1
 static QWidget* createLineWidget(QString content, int yPosition, QWidget* parent = nullptr) {
@@ -101,13 +102,22 @@ int main(int argc, char *argv[]) {
 //    qvBoxLayout.addWidget(&thirdButton);
 
     //QGridLayout
-    QGridLayout qGridLayout(&mainWidget);
-    QPushButton firstButton("First Button", &mainWidget);
-    QPushButton secondButton("Second Button", &mainWidget);
-    QPushButton thirdButton("Third Button", &mainWidget);
-    qGridLayout.addWidget(&firstButton, 0,0);
-    qGridLayout.addWidget(&secondButton, 1,0, 1, 2);
-    qGridLayout.addWidget(&thirdButton, 2,1);
+//    QGridLayout qGridLayout(&mainWidget);
+//    QPushButton firstButton("First Button", &mainWidget);
+//    QPushButton secondButton("Second Button", &mainWidget);
+//    QPushButton thirdButton("Third Button", &mainWidget);
+//    qGridLayout.addWidget(&firstButton, 0,0);
+//    qGridLayout.addWidget(&secondButton, 1,0, 1, 2);
+//    qGridLayout.addWidget(&thirdButton, 2,1);
+//    qGridLayout.setVerticalSpacing(0);
+//    qGridLayout.setHorizontalSpacing(0);
+
+    //QFormLayout
+    QFormLayout formLayout(&mainWidget);
+    QLineEdit edit(&mainWidget);
+    formLayout.addRow("label", &edit);
+    QPushButton button("b", &mainWidget);
+    formLayout.addWidget(&button);
     mainWidget.show();
     return QApplication::exec();
 }
