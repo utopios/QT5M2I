@@ -3,7 +3,9 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QSpinBox>
+#include <QHBoxLayout>
 
+//Fonction de l'exercice 1
 static QWidget* createLineWidget(QString content, int yPosition, QWidget* parent = nullptr) {
     QWidget* widget = new QWidget(parent);
     QLabel* label = new QLabel(content, widget);
@@ -60,7 +62,7 @@ int main(int argc, char *argv[]) {
 
 
 //Correction EX1
-    QWidget mainWidget;
+    /*QWidget mainWidget;
     mainWidget.resize(600,600);
     int position = 0;
     QWidget* firstNameWidget = createLineWidget("First Name", position, &mainWidget);
@@ -75,6 +77,37 @@ int main(int argc, char *argv[]) {
     QWidget* ageWidget = createSpinBoxWidget("Age", position, &mainWidget);
     position += 30;
     QWidget* buttonWidget = createButtonWidget("Confirm", position, &mainWidget);
+    mainWidget.show();*/
+
+    //Utilisation des QLayouts
+    QWidget mainWidget;
+
+    //QHBoxLayout
+//    QHBoxLayout qhBoxLayout(&mainWidget);
+//    QPushButton firstButton("First Button", &mainWidget);
+//    QPushButton secondButton("Second Button", &mainWidget);
+//    QPushButton thirdButton("Third Button", &mainWidget);
+//    qhBoxLayout.addWidget(&firstButton);
+//    qhBoxLayout.addWidget(&secondButton);
+//    qhBoxLayout.addWidget(&thirdButton);
+
+    //QVBoxLayout
+//    QVBoxLayout qvBoxLayout(&mainWidget);
+//    QPushButton firstButton("First Button", &mainWidget);
+//    QPushButton secondButton("Second Button", &mainWidget);
+//    QPushButton thirdButton("Third Button", &mainWidget);
+//    qvBoxLayout.addWidget(&firstButton);
+//    qvBoxLayout.addWidget(&secondButton);
+//    qvBoxLayout.addWidget(&thirdButton);
+
+    //QGridLayout
+    QGridLayout qGridLayout(&mainWidget);
+    QPushButton firstButton("First Button", &mainWidget);
+    QPushButton secondButton("Second Button", &mainWidget);
+    QPushButton thirdButton("Third Button", &mainWidget);
+    qGridLayout.addWidget(&firstButton, 0,0);
+    qGridLayout.addWidget(&secondButton, 1,0, 1, 2);
+    qGridLayout.addWidget(&thirdButton, 2,1);
     mainWidget.show();
     return QApplication::exec();
 }
