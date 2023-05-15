@@ -3,8 +3,11 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QSpinBox>
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QFormLayout>
+#include "mainwindow.h"
+#include "demosignal/Button.h"
+#include "demosignal/Light.h"
 
 //Fonction de l'exercice 1
 static QWidget* createLineWidget(QString content, int yPosition, QWidget* parent = nullptr) {
@@ -113,7 +116,7 @@ int main(int argc, char *argv[]) {
     mainWidget.show();*/
 
     //Utilisation des QLayouts
-    QWidget mainWidget;
+    //QWidget mainWidget;
 
     //QHBoxLayout
 //    QHBoxLayout qhBoxLayout(&mainWidget);
@@ -166,17 +169,27 @@ int main(int argc, char *argv[]) {
 //    qvBoxLayout.addWidget(ageWidget);
 //    qvBoxLayout.addWidget(buttonWidget);
 
-    QFormLayout formLayout(&mainWidget);
-    QLineEdit* firstNameLineEdit = new QLineEdit(&mainWidget);
-    QLineEdit* lastNameLineEdit = new QLineEdit(&mainWidget);
-    QLineEdit* phoneLineEdit = new QLineEdit(&mainWidget);
-    QSpinBox* ageSpinBox = new QSpinBox(&mainWidget);
-    QWidget* buttonWidget = createButtonWidget("Confirm", &mainWidget);
-    formLayout.addRow("First name", firstNameLineEdit);
-    formLayout.addRow("last name", lastNameLineEdit);
-    formLayout.addRow("phone", phoneLineEdit);
-    formLayout.addRow("age", ageSpinBox);
-    formLayout.addWidget(buttonWidget);
-    mainWidget.show();
+//    QFormLayout formLayout(&mainWidget);
+//    QLineEdit* firstNameLineEdit = new QLineEdit(&mainWidget);
+//    QLineEdit* lastNameLineEdit = new QLineEdit(&mainWidget);
+//    QLineEdit* phoneLineEdit = new QLineEdit(&mainWidget);
+//    QSpinBox* ageSpinBox = new QSpinBox(&mainWidget);
+//    QWidget* buttonWidget = createButtonWidget("Confirm", &mainWidget);
+//    formLayout.addRow("First name", firstNameLineEdit);
+//    formLayout.addRow("last name", lastNameLineEdit);
+//    formLayout.addRow("phone", phoneLineEdit);
+//    formLayout.addRow("age", ageSpinBox);
+//    formLayout.addWidget(buttonWidget);
+//    mainWidget.show();
+//    MainWindow mainWindow;
+//    mainWindow.show();
+
+    //Démo signal et slot
+    Button button;
+    Light light;
+    QObject::connect(&button, &Button::clicked, &light, &Light::detectLight);
+    button.click();
+    button.click();
+    button.click();
     return QApplication::exec();
 }
