@@ -4,14 +4,33 @@
 #include <QLineEdit>
 #include <QSpinBox>
 
-static QWidget* createLineWidget(QString content, int xPosition, QWidget* parent = nullptr) {
+static QWidget* createLineWidget(QString content, int yPosition, QWidget* parent = nullptr) {
     QWidget* widget = new QWidget(parent);
     QLabel* label = new QLabel(content, widget);
     label->resize(100, 30);
     QLineEdit* nameLineEdit = new QLineEdit(widget);
     nameLineEdit->resize(100, 30);
-    nameLineEdit->move(xPosition, 0);
-    widget->move(0, xPosition);
+    nameLineEdit->move(100, 0);
+    widget->move(0, yPosition);
+    return widget;
+}
+
+static QWidget* createSpinBoxWidget(QString content, int yPosition, QWidget* parent = nullptr) {
+    QWidget* widget = new QWidget(parent);
+    QLabel* label = new QLabel(content, widget);
+    label->resize(100, 30);
+    QSpinBox* spinBox = new QSpinBox(widget);
+    spinBox->resize(100, 30);
+    spinBox->move(100, 0);
+    widget->move(0, yPosition);
+    return widget;
+}
+
+static QWidget* createButtonWidget(QString content, int yPosition, QWidget* parent = nullptr) {
+    QWidget* widget = new QWidget(parent);
+    QPushButton* button = new QPushButton(content, widget);
+    button->resize(200, 30);
+    widget->move(0, yPosition);
     return widget;
 }
 
@@ -42,15 +61,20 @@ int main(int argc, char *argv[]) {
 
 //Correction EX1
     QWidget mainWidget;
+    mainWidget.resize(600,600);
     int position = 0;
     QWidget* firstNameWidget = createLineWidget("First Name", position, &mainWidget);
     //firstNameWidget->setParent(&mainWidget);
     position += 30;
     QWidget* lastNameWidget = createLineWidget("Last Name", position, &mainWidget);
     //lastNameWidget->setParent(&mainWidget);
-    position += 60;
+    position += 30;
     QWidget* phoneWidget = createLineWidget("Phone ", position, &mainWidget);
     //phoneWidget->setParent(&mainWidget);
+    position += 30;
+    QWidget* ageWidget = createSpinBoxWidget("Age", position, &mainWidget);
+    position += 30;
+    QWidget* buttonWidget = createButtonWidget("Confirm", position, &mainWidget);
     mainWidget.show();
     return QApplication::exec();
 }
