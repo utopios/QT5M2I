@@ -6,6 +6,8 @@
 #define CLION_DEMO_APP_MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPushButton>
+#include <QLineEdit>
 
 
 QT_BEGIN_NAMESPACE
@@ -17,11 +19,17 @@ Q_OBJECT
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-
+    void createContent();
     ~MainWindow() override;
 
 private:
     Ui::MainWindow *ui;
+    QWidget* widget;
+    QPushButton* qPushButton;
+    QLineEdit* nameLineEdit;
+
+private slots:
+        void handleClickButton();
 };
 
 

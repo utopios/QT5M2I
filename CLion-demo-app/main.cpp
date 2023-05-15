@@ -181,15 +181,17 @@ int main(int argc, char *argv[]) {
 //    formLayout.addRow("age", ageSpinBox);
 //    formLayout.addWidget(buttonWidget);
 //    mainWidget.show();
-//    MainWindow mainWindow;
-//    mainWindow.show();
+
+//     Utilisation d'une mainWindow
+    MainWindow mainWindow;
+    mainWindow.show();
 
     //Démo signal et slot
-    Button button;
-    Light light;
-    QObject::connect(&button, &Button::clicked, &light, &Light::detectLight);
-    button.click();
-    button.click();
-    button.click();
+//    Button button;
+//    Light light;
+//    QObject::connect(&button, &Button::clicked, &light, &Light::detectLight);
+//    button.click();
+//    button.click();
+//    button.click();
     return QApplication::exec();
 }

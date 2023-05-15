@@ -145,6 +145,7 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qline.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qlist.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qlogging.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qmap.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qmargins.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qmetatype.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qmutex.h \
@@ -175,6 +176,7 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qsystemdetection.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qtcore-config.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qtypeinfo.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qvariant.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qvarlengtharray.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qvector.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qversiontagging.h \
@@ -190,18 +192,28 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qmatrix.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpaintdevice.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpalette.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpen.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpixelformat.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpixmap.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpolygon.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qregion.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qrgb.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qrgba64.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtextcursor.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtextformat.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtextoption.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtgui-config.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtguiglobal.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QMainWindow \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QPushButton \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractbutton.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qframe.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlineedit.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qmainwindow.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qpushbutton.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qsizepolicy.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabwidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgets-config.h \
