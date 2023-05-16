@@ -8,6 +8,7 @@
 #include "mainwindow.h"
 #include "demosignal/Button.h"
 #include "demosignal/Light.h"
+#include "contactwindow.h"
 
 //Fonction de l'exercice 1
 static QWidget* createLineWidget(QString content, int yPosition, QWidget* parent = nullptr) {
@@ -183,8 +184,8 @@ int main(int argc, char *argv[]) {
 //    mainWidget.show();
 
 //     Utilisation d'une mainWindow
-    MainWindow mainWindow;
-    mainWindow.show();
+//    MainWindow mainWindow;
+//    mainWindow.show();
 
     //Démo signal et slot
 //    Button button;
@@ -193,5 +194,9 @@ int main(int argc, char *argv[]) {
 //    button.click();
 //    button.click();
 //    button.click();
+
+    //Correction Exercice 3
+    ContactWindow contactWindow;
+    contactWindow.show();
     return QApplication::exec();
 }

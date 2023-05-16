@@ -149,6 +149,8 @@ CLion_demo_app_autogen/timestamp: \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake \
+	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/contactwindow.cpp \
+	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/contactwindow.h \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/demosignal/Button.cpp \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/demosignal/Button.h \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/demosignal/Light.cpp \
@@ -199,6 +201,7 @@ CLion_demo_app_autogen/timestamp: \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qrect.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qrefcount.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qregexp.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qregularexpression.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qscopedpointer.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qset.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qshareddata.h \
@@ -245,16 +248,27 @@ CLion_demo_app_autogen/timestamp: \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtgui-config.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtguiglobal.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qvalidator.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QFormLayout \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLayout \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QMainWindow \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QPushButton \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QSpinBox \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractbutton.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractspinbox.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qboxlayout.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qformlayout.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qframe.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qgridlayout.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlayout.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlayoutitem.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlineedit.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qmainwindow.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qpushbutton.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qsizepolicy.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qspinbox.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabwidget.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgets-config.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgetsglobal.h \
@@ -294,5 +308,6 @@ CLion_demo_app_autogen/timestamp: \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake \
+	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/ContactWindow.ui \
 	/Users/ihab/Desktop/QT5M2I/CLion-demo-app/MainWindow.ui \
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
