@@ -8,6 +8,7 @@
 #include <QSqlDatabase>
 #include <QDir>
 #include <QSqlQuery>
+#include <QSqlError>
 #include "mainwindow.h"
 #include "demosignal/Button.h"
 #include "demosignal/Light.h"
@@ -239,6 +240,19 @@ int main(int argc, char *argv[]) {
     query.bindValue(":firstName", firstName);
     query.bindValue(":lastName", lastName);
     result = query.exec();
+    if(!result) {
+        //Récupérer l'erreur SQL
+        QSqlError error = db.lastError();
+        qDebug() << error.text();
+    }
+
+    //Request SELECT
+    result = query.exec("SELECT * FROM person");
+    if(result) {
+        while (query.next()) {
+            qDebug() << query.value("first_name").toString() + " "+ query.value("last_name").toString();
+        }
+    }
     db.close();
     return QApplication::exec();
 }
