@@ -16,6 +16,7 @@ ContactWindow::ContactWindow(QWidget *parent) :
     ui->setupUi(this);
     initContactTable();
     createContent();
+    getContacts();
 }
 
 void ContactWindow::createContent() {
@@ -76,6 +77,7 @@ bool ContactWindow::addContact() {
         error = query->lastError();
         qDebug() << error.text();
     }
+    database.close();
     return result;
 }
 
@@ -84,6 +86,16 @@ void ContactWindow::handleDeleteSelectedItem() {
     messageBox.setText(selectedItem->text());
     messageBox.exec();
     delete selectedItem;
+}
+
+void ContactWindow::getContacts() {
+    database.open();
+    query = new QSqlQuery(database);
+    query->exec("SELECT * FROM contact");
+    while(query->next()) {
+        qListWidget->addItem(*new QString(query->value("first_name").toString() + " "+ query->value("last_name").toString() + " "+ query->value("phone").toString()+ " "+ query->value("age").toString()));
+    }
+    database.close();
 }
 
 void ContactWindow::handleValidButton() {
