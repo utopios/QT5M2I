@@ -212,6 +212,14 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qvalidator.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/QSqlDatabase \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/QSqlError \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/QSqlQuery \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qsqldatabase.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qsqlerror.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qsqlquery.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qtsql-config.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qtsqlglobal.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QFormLayout \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLayout \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \

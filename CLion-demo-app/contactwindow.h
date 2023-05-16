@@ -11,6 +11,9 @@
 #include <QLineEdit>
 #include <QSpinBox>
 #include <QListWidget>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 
 
 QT_BEGIN_NAMESPACE
@@ -36,7 +39,14 @@ private:
     QSpinBox* ageEdit;
     QListWidget* qListWidget;
     QListWidgetItem* selectedItem;
+    QSqlDatabase database;
+    QSqlQuery* query;
+    QSqlError error;
     void createContent();
+    void initContactTable();
+    bool addContact();
+    void getContacts();
+    bool deleteContact();
 
 private slots:
     void handleValidButton();

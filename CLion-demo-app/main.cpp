@@ -213,46 +213,51 @@ int main(int argc, char *argv[]) {
 
     //Utilisation de QT SQL
     //Création d'un dossier data au même niveau que l'application
-    QString dataFolderPath = QCoreApplication::applicationDirPath() + "/data";
-    QDir().mkpath(dataFolderPath);
+//    QString dataFolderPath = QCoreApplication::applicationDirPath() + "/data";
+//    QDir().mkpath(dataFolderPath);
+//
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+//    db.setDatabaseName(dataFolderPath + "/demo.db");
+//    db.open();
+//    QSqlQuery query(db);
+//    bool result = false;
+//    //Intéraction avec les tables
+//    if(!db.tables().contains("person")) {
+//        // Execution d'une première request
+//
+//        result = query.exec("CREATE TABLE person (first_name TEXT, last_name TEXT)");
+//        if(result) {
+//            qDebug() << "Table créé";
+//        }
+//    }
+//    //Request insertion
+//    QString firstName = "abadi";
+//    QString lastName = "ihab";
+//    //Non préparer
+//    //result = query.exec("INSERT INTO person (first_name, last_name) values ('toto', 'tata')");
+//    // préparer
+//    query.prepare("INSERT INTO person (first_name, last_name) values (:firstName, :lastName)");
+//    query.bindValue(":firstName", firstName);
+//    query.bindValue(":lastName", lastName);
+//    result = query.exec();
+//    if(!result) {
+//        //Récupérer l'erreur SQL
+//        QSqlError error = db.lastError();
+//        qDebug() << error.text();
+//    }
+//
+//    //Request SELECT
+//    result = query.exec("SELECT * FROM person");
+//    if(result) {
+//        while (query.next()) {
+//            qDebug() << query.value("first_name").toString() + " "+ query.value("last_name").toString();
+//        }
+//    }
+//    db.close();
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(dataFolderPath + "/demo.db");
-    db.open();
-    QSqlQuery query(db);
-    bool result = false;
-    //Intéraction avec les tables
-    if(!db.tables().contains("person")) {
-        // Execution d'une première request
+    //Correction Exercice 5
 
-        result = query.exec("CREATE TABLE person (first_name TEXT, last_name TEXT)");
-        if(result) {
-            qDebug() << "Table créé";
-        }
-    }
-    //Request insertion
-    QString firstName = "abadi";
-    QString lastName = "ihab";
-    //Non préparer
-    //result = query.exec("INSERT INTO person (first_name, last_name) values ('toto', 'tata')");
-    // préparer
-    query.prepare("INSERT INTO person (first_name, last_name) values (:firstName, :lastName)");
-    query.bindValue(":firstName", firstName);
-    query.bindValue(":lastName", lastName);
-    result = query.exec();
-    if(!result) {
-        //Récupérer l'erreur SQL
-        QSqlError error = db.lastError();
-        qDebug() << error.text();
-    }
-
-    //Request SELECT
-    result = query.exec("SELECT * FROM person");
-    if(result) {
-        while (query.next()) {
-            qDebug() << query.value("first_name").toString() + " "+ query.value("last_name").toString();
-        }
-    }
-    db.close();
+    ContactWindow contactWindow;
+    contactWindow.show();
     return QApplication::exec();
 }

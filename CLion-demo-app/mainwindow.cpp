@@ -37,6 +37,7 @@ void MainWindow::handleClickButton() {
     messageBox.setText(nameLineEdit->text());
     messageBox.exec();
     qListView->addItem(*new QString(nameLineEdit->text()));
+
 }
 
 void MainWindow::selectedItem(QListWidgetItem *item) {
