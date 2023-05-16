@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QSpinBox>
+#include <QListWidget>
 
 
 QT_BEGIN_NAMESPACE
@@ -28,14 +29,19 @@ private:
     QWidget* mainWidget;
     QFormLayout* formLayout;
     QPushButton* validButton;
+    QPushButton* deleteButton;
     QLineEdit* firstNameEdit;
     QLineEdit* lastNameEdit;
     QLineEdit* phoneEdit;
     QSpinBox* ageEdit;
+    QListWidget* qListWidget;
+    QListWidgetItem* selectedItem;
     void createContent();
 
 private slots:
     void handleValidButton();
+    void handleDeleteSelectedItem();
+    void handleselectedItem(QListWidgetItem* item);
 };
 
 

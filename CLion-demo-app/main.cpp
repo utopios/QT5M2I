@@ -200,7 +200,11 @@ int main(int argc, char *argv[]) {
 //    contactWindow.show();
 
     //Utilisation des QListView dans mainWindow
-    MainWindow mainWindow;
-    mainWindow.show();
+//    MainWindow mainWindow;
+//    mainWindow.show();
+
+    //Correction Exercice 4
+    ContactWindow contactWindow;
+    contactWindow.show();
     return QApplication::exec();
 }
