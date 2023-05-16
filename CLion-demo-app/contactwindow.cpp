@@ -64,7 +64,8 @@ void ContactWindow::handleselectedItem(QListWidgetItem *item) {
     selectedItem = item;
 }
 
-bool ContactWindow::addContact() {
+int ContactWindow::addContact() {
+    int contactId = 0;
     database.open();
     query = new QSqlQuery(database);
     query->prepare("INSERT INTO contact (first_name, last_name, phone, age) values (:first_name, :last_name, :phone, :age)");
@@ -73,17 +74,21 @@ bool ContactWindow::addContact() {
     query->bindValue(":age", ageEdit->text());
     query->bindValue(":phone", phoneEdit->text());
     bool result = query->exec();
+    QVariant id = query->lastInsertId();
+    if(id.isValid()) {
+        contactId= id.toInt();
+    }
     if(!result) {
         error = query->lastError();
         qDebug() << error.text();
     }
     database.close();
-    return result;
+    return contactId;
 }
 
 void ContactWindow::handleDeleteSelectedItem() {
     QMessageBox messageBox;
-    messageBox.setText(selectedItem->text());
+    messageBox.setText(selectedItem->text() + " "+ selectedItem->type());
     messageBox.exec();
     delete selectedItem;
 }
@@ -93,7 +98,7 @@ void ContactWindow::getContacts() {
     query = new QSqlQuery(database);
     query->exec("SELECT * FROM contact");
     while(query->next()) {
-        qListWidget->addItem(*new QString(query->value("first_name").toString() + " "+ query->value("last_name").toString() + " "+ query->value("phone").toString()+ " "+ query->value("age").toString()));
+        qListWidget->addItem(new QListWidgetItem(*new QString(query->value("id").toString() + " "+ query->value("first_name").toString() + " "+ query->value("last_name").toString() + " "+ query->value("phone").toString()+ " "+ query->value("age").toString()), qListWidget, query->value("id").toInt()));
     }
     database.close();
 }
@@ -102,9 +107,9 @@ void ContactWindow::handleValidButton() {
 //    QMessageBox messageBox;
 //    messageBox.setText(firstNameEdit->text() + " "+ lastNameEdit->text() + " "+ phoneEdit->text() + " "+ ageEdit->text());
 //
-    if(addContact()) {
-        qListWidget->addItem(*new QString(firstNameEdit->text() + " "+ lastNameEdit->text() + " "+ phoneEdit->text() + " "+ ageEdit->text()));
-
+    int contactId = addContact();
+    if(contactId > 0) {
+        qListWidget->addItem(new QListWidgetItem(*new QString( QString::number(contactId) +":"+firstNameEdit->text() + " "+ lastNameEdit->text() + " "+ phoneEdit->text() + " "+ ageEdit->text()), qListWidget, contactId));
         firstNameEdit->setText("");
         lastNameEdit->setText("");
         phoneEdit->setText(nullptr);

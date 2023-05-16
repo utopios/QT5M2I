@@ -44,7 +44,7 @@ private:
     QSqlError error;
     void createContent();
     void initContactTable();
-    bool addContact();
+    int addContact();
     void getContacts();
     bool deleteContact();
 
