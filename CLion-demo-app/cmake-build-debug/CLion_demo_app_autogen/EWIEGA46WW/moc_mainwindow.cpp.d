@@ -123,6 +123,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include/stdarg.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qabstractitemmodel.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qalgorithms.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qarraydata.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qatomic.h \
@@ -141,9 +142,11 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qhash.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qhashfunctions.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qiodevice.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qitemselectionmodel.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qiterator.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qline.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qlist.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qlocale.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qlogging.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qmap.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qmargins.h \
@@ -161,7 +164,9 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qrect.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qrefcount.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qregexp.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qregularexpression.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qscopedpointer.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qset.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qshareddata.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qsharedpointer.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qsharedpointer_impl.h \
@@ -205,16 +210,31 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtgui-config.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtguiglobal.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qvalidator.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QListView \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QListWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QMainWindow \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QPushButton \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractbutton.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractitemdelegate.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractitemview.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractscrollarea.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractslider.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractspinbox.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qframe.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlineedit.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlistview.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlistwidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qmainwindow.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qpushbutton.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qrubberband.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qsizepolicy.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qslider.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyle.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyleoption.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabbar.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabwidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgets-config.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgetsglobal.h \

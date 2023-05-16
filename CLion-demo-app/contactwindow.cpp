@@ -35,8 +35,13 @@ void ContactWindow::createContent() {
 void ContactWindow::handleValidButton() {
     QMessageBox messageBox;
     messageBox.setText(firstNameEdit->text() + " "+ lastNameEdit->text() + " "+ phoneEdit->text() + " "+ ageEdit->text());
+    firstNameEdit->setText("");
+    lastNameEdit->setText("");
+    phoneEdit->setText(nullptr);
+    ageEdit->setValue(0);
     messageBox.exec();
 }
+
 
 ContactWindow::~ContactWindow() {
     delete ui;

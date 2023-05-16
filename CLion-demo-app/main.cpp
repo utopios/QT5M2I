@@ -196,7 +196,11 @@ int main(int argc, char *argv[]) {
 //    button.click();
 
     //Correction Exercice 3
-    ContactWindow contactWindow;
-    contactWindow.show();
+//    ContactWindow contactWindow;
+//    contactWindow.show();
+
+    //Utilisation des QListView dans mainWindow
+    MainWindow mainWindow;
+    mainWindow.show();
     return QApplication::exec();
 }

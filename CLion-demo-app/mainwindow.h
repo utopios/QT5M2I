@@ -8,6 +8,8 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QLineEdit>
+#include <QListView>
+#include <QListWidget>
 
 
 QT_BEGIN_NAMESPACE
@@ -27,9 +29,11 @@ private:
     QWidget* widget;
     QPushButton* qPushButton;
     QLineEdit* nameLineEdit;
+    QListWidget* qListView;
 
 private slots:
         void handleClickButton();
+        void selectedItem(QListWidgetItem* item);
 };
 
 
