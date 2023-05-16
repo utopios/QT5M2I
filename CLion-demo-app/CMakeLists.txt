@@ -13,7 +13,7 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(CLion_demo_app main.cpp mainwindow.cpp mainwindow.h mainwindow.ui demosignal/Button.cpp demosignal/Button.h demosignal/Light.cpp demosignal/Light.h contactwindow.cpp contactwindow.h contactwindow.ui)
+add_executable(CLion_demo_app main.cpp mainwindow.cpp mainwindow.h mainwindow.ui demosignal/Button.cpp demosignal/Button.h demosignal/Light.cpp demosignal/Light.h contactwindow.cpp contactwindow.h contactwindow.ui correction.ex.rappel.joachim/mainwindow.cpp correction.ex.rappel.joachim/mainwindow.h correction.ex.rappel.joachim/mainwindow.ui)
 target_link_libraries(CLion_demo_app
         Qt5::Core
         Qt5::Gui

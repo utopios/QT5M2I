@@ -120,6 +120,14 @@ build CMakeFiles/CLion_demo_app.dir/contactwindow.cpp.o: CXX_COMPILER__CLion_dem
   OBJECT_DIR = CMakeFiles/CLion_demo_app.dir
   OBJECT_FILE_DIR = CMakeFiles/CLion_demo_app.dir
 
+build CMakeFiles/CLion_demo_app.dir/correction.ex.rappel.joachim/mainwindow.cpp.o: CXX_COMPILER__CLion_demo_app_Debug /Users/ihab/Desktop/QT5M2I/CLion-demo-app/correction.ex.rappel.joachim/mainwindow.cpp || cmake_object_order_depends_target_CLion_demo_app
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/CLion_demo_app.dir/correction.ex.rappel.joachim/mainwindow.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -fPIC -std=gnu++2a
+  INCLUDES = -I/Users/ihab/Desktop/QT5M2I/CLion-demo-app/cmake-build-debug/CLion_demo_app_autogen/include -iframework /Users/ihab/Qt/5.15.2/clang_64/lib -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/./mkspecs/macx-clang -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/CLion_demo_app.dir
+  OBJECT_FILE_DIR = CMakeFiles/CLion_demo_app.dir/correction.ex.rappel.joachim
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CLion_demo_app
@@ -128,7 +136,7 @@ build CMakeFiles/CLion_demo_app.dir/contactwindow.cpp.o: CXX_COMPILER__CLion_dem
 #############################################
 # Link the executable CLion_demo_app
 
-build CLion_demo_app: CXX_EXECUTABLE_LINKER__CLion_demo_app_Debug CMakeFiles/CLion_demo_app.dir/CLion_demo_app_autogen/mocs_compilation.cpp.o CMakeFiles/CLion_demo_app.dir/main.cpp.o CMakeFiles/CLion_demo_app.dir/mainwindow.cpp.o CMakeFiles/CLion_demo_app.dir/demosignal/Button.cpp.o CMakeFiles/CLion_demo_app.dir/demosignal/Light.cpp.o CMakeFiles/CLion_demo_app.dir/contactwindow.cpp.o | /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore || CLion_demo_app_autogen CLion_demo_app_autogen_timestamp_deps
+build CLion_demo_app: CXX_EXECUTABLE_LINKER__CLion_demo_app_Debug CMakeFiles/CLion_demo_app.dir/CLion_demo_app_autogen/mocs_compilation.cpp.o CMakeFiles/CLion_demo_app.dir/main.cpp.o CMakeFiles/CLion_demo_app.dir/mainwindow.cpp.o CMakeFiles/CLion_demo_app.dir/demosignal/Button.cpp.o CMakeFiles/CLion_demo_app.dir/demosignal/Light.cpp.o CMakeFiles/CLion_demo_app.dir/contactwindow.cpp.o CMakeFiles/CLion_demo_app.dir/correction.ex.rappel.joachim/mainwindow.cpp.o | /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore || CLion_demo_app_autogen CLion_demo_app_autogen_timestamp_deps
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/ihab/Qt/5.15.2/clang_64/lib  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore
   OBJECT_DIR = CMakeFiles/CLion_demo_app.dir
