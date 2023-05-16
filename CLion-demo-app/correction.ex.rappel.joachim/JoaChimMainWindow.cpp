@@ -4,17 +4,17 @@
 
 // You may need to build the project (run Qt uic code generator) to get "ui_MainWindow.h" resolved
 
-#include "mainwindow.h"
-#include "ui_MainWindow.h"
+#include "JoaChimMainWindow.h"
+#include "ui_JoaChimMainWindow.h"
 
 
-MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::MainWindow) {
+JoaChimMainWindow::JoaChimMainWindow(QWidget *parent) :
+        QMainWindow(parent), ui(new Ui::JoaChimMainWindow) {
     ui->setupUi(this);
     createContent();
 }
 
-void MainWindow::createContent() {
+void JoaChimMainWindow::createContent() {
     m_widget = new QWidget();
     m_qvBoxLayout = new QVBoxLayout(m_widget);
     m_qhBoxLayout = new QHBoxLayout();
@@ -35,13 +35,14 @@ void MainWindow::createContent() {
     m_qvBoxLayout->addLayout(m_qhBoxLayout);
     m_qvBoxLayout->addWidget(m_conversionButton);
 
-    QObject::connect(m_conversionButton, &QPushButton::clicked, this, &MainWindow::handleConversionButton);
+    QObject::connect(m_conversionButton, &QPushButton::clicked, this, &JoaChimMainWindow::handleConversionButton);
     setCentralWidget(m_widget);
 }
 
-void MainWindow::handleConversionButton() {
+void JoaChimMainWindow::handleConversionButton() {
     double conv(0.0);
     QString suffix("");
+
     if (m_qComboBox->currentIndex() == 0) {
         conv = (m_temperatureSpinBox->value() * 9/5) + 32;
         suffix = " °F";
@@ -54,7 +55,7 @@ void MainWindow::handleConversionButton() {
     m_qLabel->setText(convString + suffix);
 }
 
-MainWindow::~MainWindow() {
+JoaChimMainWindow::~JoaChimMainWindow() {
     delete ui;
 }
 

@@ -2,8 +2,8 @@
 // Created by ihab on 16/05/2023.
 //
 
-#ifndef CLION_DEMO_APP_MAINWINDOW_H
-#define CLION_DEMO_APP_MAINWINDOW_H
+#ifndef CLION_DEMO_APP_JOACHIMMAINWINDOW_H
+#define CLION_DEMO_APP_JOACHIMMAINWINDOW_H
 
 #include <QMainWindow>
 #include <QVBoxLayout>
@@ -14,19 +14,19 @@
 
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class JoaChimMainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class JoaChimMainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit JoaChimMainWindow(QWidget *parent = nullptr);
 
-    ~MainWindow() override;
+    ~JoaChimMainWindow() override;
 
 private:
-    Ui::MainWindow *ui;
+    Ui::JoaChimMainWindow *ui;
     QWidget* m_widget;
     QVBoxLayout* m_qvBoxLayout;
     QHBoxLayout* m_qhBoxLayout;
@@ -43,4 +43,4 @@ private slots:
 
 
 
-#endif //CLION_DEMO_APP_MAINWINDOW_H
+#endif //CLION_DEMO_APP_JOACHIMMAINWINDOW_H

@@ -5,6 +5,9 @@
 #include <QSpinBox>
 #include <QVBoxLayout>
 #include <QFormLayout>
+#include <QSqlDatabase>
+#include <QDir>
+#include <QSqlQuery>
 #include "mainwindow.h"
 #include "demosignal/Button.h"
 #include "demosignal/Light.h"
@@ -204,7 +207,38 @@ int main(int argc, char *argv[]) {
 //    mainWindow.show();
 
     //Correction Exercice 4
-    ContactWindow contactWindow;
-    contactWindow.show();
+//    ContactWindow contactWindow;
+//    contactWindow.show();
+
+    //Utilisation de QT SQL
+    //Création d'un dossier data au même niveau que l'application
+    QString dataFolderPath = QCoreApplication::applicationDirPath() + "/data";
+    QDir().mkpath(dataFolderPath);
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName(dataFolderPath + "/demo.db");
+    db.open();
+    QSqlQuery query(db);
+    bool result = false;
+    //Intéraction avec les tables
+    if(!db.tables().contains("person")) {
+        // Execution d'une première request
+
+        result = query.exec("CREATE TABLE person (first_name TEXT, last_name TEXT)");
+        if(result) {
+            qDebug() << "Table créé";
+        }
+    }
+    //Request insertion
+    QString firstName = "abadi";
+    QString lastName = "ihab";
+    //Non préparer
+    //result = query.exec("INSERT INTO person (first_name, last_name) values ('toto', 'tata')");
+    // préparer
+    query.prepare("INSERT INTO person (first_name, last_name) values (:firstName, :lastName)");
+    query.bindValue(":firstName", firstName);
+    query.bindValue(":lastName", lastName);
+    result = query.exec();
+    db.close();
     return QApplication::exec();
 }
