@@ -6,6 +6,7 @@
 
 #include "formwidget.h"
 #include "ui_FormWidget.h"
+#include "../dao/ContactDAO.h"
 
 
 FormWidget::FormWidget(QWidget *parent) :
@@ -22,11 +23,21 @@ void FormWidget::createContent() {
     ageEdit = new QSpinBox(this);
     //ageEdit.setParent(this);
     validButton = new QPushButton("Valid", this);
+    QObject::connect(validButton, &QPushButton::clicked, this, &FormWidget::handleValidButton);
     formLayout->addRow("First name", firstNameEdit);
     formLayout->addRow("last name", lastNameEdit);
     formLayout->addRow("phone", phoneEdit);
     formLayout->addRow("age", ageEdit);
     formLayout->addWidget(validButton);
+}
+
+void FormWidget::handleValidButton() {
+    //Appel à la dao
+    Contact contact(0, firstNameEdit->text(), lastNameEdit->text(), phoneEdit->text(), ageEdit->value());
+    ContactDAO contactDao();
+    if(contactDao().add(contact)) {
+        emit contactAdded(contact);
+    }
 }
 
 FormWidget::~FormWidget() {

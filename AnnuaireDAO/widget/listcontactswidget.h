@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QListWidget>
 #include <QPushButton>
+#include "../entity/contact.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -28,6 +29,9 @@ private:
     QListWidgetItem* selectedItem;
     QPushButton* deleteButton;
     void createContent();
+
+public slots:
+    void handleContactAdded(Contact& contact);
 };
 
 

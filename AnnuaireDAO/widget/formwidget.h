@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QSpinBox>
+#include "../entity/contact.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -24,6 +25,8 @@ public:
 
     ~FormWidget() override;
 
+signals:
+    void contactAdded(Contact& contact);
 private:
     Ui::FormWidget *ui;
     QFormLayout* formLayout;
@@ -33,6 +36,8 @@ private:
     QLineEdit* phoneEdit;
     QSpinBox* ageEdit;
     void createContent();
+private slots:
+    void handleValidButton();
 };
 
 

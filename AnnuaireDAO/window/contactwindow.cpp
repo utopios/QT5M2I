@@ -15,6 +15,7 @@ ContactWindow::ContactWindow(QWidget *parent) :
     qvBoxLayout = new QVBoxLayout(mainWidget);
     formWidget = new FormWidget(mainWidget);
     listContactsWidget = new ListContactsWidget(mainWidget);
+    QObject::connect(formWidget, &FormWidget::contactAdded, listContactsWidget, &ListContactsWidget::handleContactAdded);
     qvBoxLayout->addWidget(formWidget);
     qvBoxLayout->addWidget(listContactsWidget);
     setCentralWidget(mainWidget);

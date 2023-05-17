@@ -20,6 +20,10 @@ void ListContactsWidget::createContent() {
     deleteButton = new QPushButton("delete", this);
 }
 
+void ListContactsWidget::handleContactAdded(Contact &contact) {
+    qListWidget->addItem(new QListWidgetItem(*new QString( QString::number(contact.id()) +":"+contact.firstName() + " "+ contact.lastName() + " "+ contact.phone() + " "+ contact.age()), qListWidget, contact.id()));
+}
+
 ListContactsWidget::~ListContactsWidget() {
     delete ui;
 }
