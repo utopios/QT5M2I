@@ -15,7 +15,7 @@ find_package(Qt5 COMPONENTS
         Sql
         REQUIRED)
 
-add_executable(AnnuaireDAO main.cpp entity/contact.cpp entity/contact.h dao/ContactDAO.cpp dao/ContactDAO.h dao/BaseDAO.cpp dao/BaseDAO.h)
+add_executable(AnnuaireDAO main.cpp entity/contact.cpp entity/contact.h dao/ContactDAO.cpp dao/ContactDAO.h dao/BaseDAO.cpp dao/BaseDAO.h window/contactwindow.cpp window/contactwindow.h window/contactwindow.ui widget/formwidget.cpp widget/formwidget.h widget/formwidget.ui)
 target_link_libraries(AnnuaireDAO
         Qt5::Core
         Qt5::Gui

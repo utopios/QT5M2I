@@ -112,6 +112,22 @@ build CMakeFiles/AnnuaireDAO.dir/dao/BaseDAO.cpp.o: CXX_COMPILER__AnnuaireDAO_De
   OBJECT_DIR = CMakeFiles/AnnuaireDAO.dir
   OBJECT_FILE_DIR = CMakeFiles/AnnuaireDAO.dir/dao
 
+build CMakeFiles/AnnuaireDAO.dir/window/contactwindow.cpp.o: CXX_COMPILER__AnnuaireDAO_Debug /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/window/contactwindow.cpp || cmake_object_order_depends_target_AnnuaireDAO
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/AnnuaireDAO.dir/window/contactwindow.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -fPIC -std=gnu++2a
+  INCLUDES = -I/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/cmake-build-debug/AnnuaireDAO_autogen/include -iframework /Users/ihab/Qt/5.15.2/clang_64/lib -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/./mkspecs/macx-clang -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Headers
+  OBJECT_DIR = CMakeFiles/AnnuaireDAO.dir
+  OBJECT_FILE_DIR = CMakeFiles/AnnuaireDAO.dir/window
+
+build CMakeFiles/AnnuaireDAO.dir/widget/formwidget.cpp.o: CXX_COMPILER__AnnuaireDAO_Debug /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/formwidget.cpp || cmake_object_order_depends_target_AnnuaireDAO
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/AnnuaireDAO.dir/widget/formwidget.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -fPIC -std=gnu++2a
+  INCLUDES = -I/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/cmake-build-debug/AnnuaireDAO_autogen/include -iframework /Users/ihab/Qt/5.15.2/clang_64/lib -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/./mkspecs/macx-clang -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Headers
+  OBJECT_DIR = CMakeFiles/AnnuaireDAO.dir
+  OBJECT_FILE_DIR = CMakeFiles/AnnuaireDAO.dir/widget
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AnnuaireDAO
@@ -120,7 +136,7 @@ build CMakeFiles/AnnuaireDAO.dir/dao/BaseDAO.cpp.o: CXX_COMPILER__AnnuaireDAO_De
 #############################################
 # Link the executable AnnuaireDAO
 
-build AnnuaireDAO: CXX_EXECUTABLE_LINKER__AnnuaireDAO_Debug CMakeFiles/AnnuaireDAO.dir/AnnuaireDAO_autogen/mocs_compilation.cpp.o CMakeFiles/AnnuaireDAO.dir/main.cpp.o CMakeFiles/AnnuaireDAO.dir/entity/contact.cpp.o CMakeFiles/AnnuaireDAO.dir/dao/ContactDAO.cpp.o CMakeFiles/AnnuaireDAO.dir/dao/BaseDAO.cpp.o | /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore || AnnuaireDAO_autogen AnnuaireDAO_autogen_timestamp_deps
+build AnnuaireDAO: CXX_EXECUTABLE_LINKER__AnnuaireDAO_Debug CMakeFiles/AnnuaireDAO.dir/AnnuaireDAO_autogen/mocs_compilation.cpp.o CMakeFiles/AnnuaireDAO.dir/main.cpp.o CMakeFiles/AnnuaireDAO.dir/entity/contact.cpp.o CMakeFiles/AnnuaireDAO.dir/dao/ContactDAO.cpp.o CMakeFiles/AnnuaireDAO.dir/dao/BaseDAO.cpp.o CMakeFiles/AnnuaireDAO.dir/window/contactwindow.cpp.o CMakeFiles/AnnuaireDAO.dir/widget/formwidget.cpp.o | /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore || AnnuaireDAO_autogen AnnuaireDAO_autogen_timestamp_deps
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/ihab/Qt/5.15.2/clang_64/lib  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore
   OBJECT_DIR = CMakeFiles/AnnuaireDAO.dir
@@ -139,7 +155,7 @@ build AnnuaireDAO_autogen_timestamp_deps: phony CMakeFiles/AnnuaireDAO_autogen_t
 #############################################
 # Utility command for AnnuaireDAO_autogen
 
-build AnnuaireDAO_autogen: phony CMakeFiles/AnnuaireDAO_autogen AnnuaireDAO_autogen/timestamp AnnuaireDAO_autogen/mocs_compilation.cpp AnnuaireDAO_autogen_timestamp_deps
+build AnnuaireDAO_autogen: phony CMakeFiles/AnnuaireDAO_autogen AnnuaireDAO_autogen/include/ui_ContactWindow.h AnnuaireDAO_autogen/include/ui_FormWidget.h AnnuaireDAO_autogen/timestamp AnnuaireDAO_autogen/mocs_compilation.cpp AnnuaireDAO_autogen_timestamp_deps
 
 
 #############################################
@@ -155,13 +171,13 @@ build AnnuaireDAO_autogen/timestamp AnnuaireDAO_autogen/mocs_compilation.cpp | $
 #############################################
 # Phony custom command for CMakeFiles/AnnuaireDAO_autogen_timestamp_deps
 
-build CMakeFiles/AnnuaireDAO_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/AnnuaireDAO_autogen_timestamp_deps: phony /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore /Users/ihab/Qt/5.15.2/clang_64/bin/moc /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/bin/uic /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql
+build CMakeFiles/AnnuaireDAO_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/AnnuaireDAO_autogen_timestamp_deps: phony /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/bin/moc /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/bin/uic /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql
 
 
 #############################################
 # Phony custom command for CMakeFiles/AnnuaireDAO_autogen
 
-build CMakeFiles/AnnuaireDAO_autogen | ${cmake_ninja_workdir}CMakeFiles/AnnuaireDAO_autogen: phony AnnuaireDAO_autogen/timestamp || AnnuaireDAO_autogen_timestamp_deps
+build CMakeFiles/AnnuaireDAO_autogen AnnuaireDAO_autogen/include/ui_ContactWindow.h AnnuaireDAO_autogen/include/ui_FormWidget.h | ${cmake_ninja_workdir}CMakeFiles/AnnuaireDAO_autogen ${cmake_ninja_workdir}AnnuaireDAO_autogen/include/ui_ContactWindow.h ${cmake_ninja_workdir}AnnuaireDAO_autogen/include/ui_FormWidget.h: phony AnnuaireDAO_autogen/timestamp || AnnuaireDAO_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
