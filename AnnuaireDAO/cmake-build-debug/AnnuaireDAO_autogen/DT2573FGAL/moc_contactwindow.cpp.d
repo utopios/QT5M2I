@@ -227,6 +227,7 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QMainWindow \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QPushButton \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QSpinBox \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QStackedWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractbutton.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractitemdelegate.h \
@@ -249,6 +250,7 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qsizepolicy.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qslider.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qspinbox.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstackedwidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyle.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyleoption.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabbar.h \

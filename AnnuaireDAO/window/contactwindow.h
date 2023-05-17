@@ -7,6 +7,7 @@
 
 #include <QMainWindow>
 #include <QSqlDatabase>
+#include <QStackedWidget>
 #include "../widget/formwidget.h"
 #include "../widget/listcontactswidget.h"
 
@@ -26,7 +27,7 @@ public:
 private:
     QSqlDatabase db_;
     Ui::ContactWindow *ui;
-    QWidget* mainWidget;
+    QStackedWidget* mainWidget;
     QVBoxLayout* qvBoxLayout;
     FormWidget* formWidget;
     ListContactsWidget* listContactsWidget;
