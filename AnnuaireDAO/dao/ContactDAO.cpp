@@ -8,7 +8,16 @@
 #include "ContactDAO.h"
 #include <QDebug>
 void ContactDAO::init() {
-
+    db_.open();
+    if(!db_.tables().contains("contact")) {
+        query = new QSqlQuery(db_);
+        bool result = query->exec("CREATE TABLE contact (id INTEGER PRIMARY KEY, first_name varchar, last_name varchar, phone varchar, age int)");
+        if(!result) {
+            error = query->lastError();
+            qDebug() << error.text();
+        }
+    }
+    db_.close();
 }
 
 bool ContactDAO::add(const Contact &contact) {
