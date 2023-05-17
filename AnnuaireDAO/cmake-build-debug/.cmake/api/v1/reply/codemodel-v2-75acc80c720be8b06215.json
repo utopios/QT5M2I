@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AnnuaireDAO",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AnnuaireDAO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AnnuaireDAO-Debug-0b3b75d82e34cedb6c53.json",
+					"name" : "AnnuaireDAO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AnnuaireDAO_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AnnuaireDAO_autogen-Debug-a8bb1215a0772fd4f357.json",
+					"name" : "AnnuaireDAO_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "AnnuaireDAO_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AnnuaireDAO_autogen_timestamp_deps-Debug-6c25194f3ad54f3f8a3e.json",
+					"name" : "AnnuaireDAO_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/cmake-build-debug",
+		"source" : "/Users/ihab/Desktop/QT5M2I/AnnuaireDAO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
