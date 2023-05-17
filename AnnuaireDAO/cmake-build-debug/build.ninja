@@ -155,7 +155,7 @@ build AnnuaireDAO_autogen/timestamp AnnuaireDAO_autogen/mocs_compilation.cpp | $
 #############################################
 # Phony custom command for CMakeFiles/AnnuaireDAO_autogen_timestamp_deps
 
-build CMakeFiles/AnnuaireDAO_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/AnnuaireDAO_autogen_timestamp_deps: phony /Users/ihab/Qt/5.15.2/clang_64/bin/uic /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore /Users/ihab/Qt/5.15.2/clang_64/bin/moc /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql
+build CMakeFiles/AnnuaireDAO_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/AnnuaireDAO_autogen_timestamp_deps: phony /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore /Users/ihab/Qt/5.15.2/clang_64/bin/moc /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/bin/uic /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql
 
 
 #############################################
