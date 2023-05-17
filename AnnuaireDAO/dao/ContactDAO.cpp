@@ -4,8 +4,9 @@
 
 #include <QList>
 #include <QSqlQuery>
+#include <QVariant>
 #include "ContactDAO.h"
-
+#include <QDebug>
 void ContactDAO::init() {
 
 }
@@ -19,17 +20,46 @@ bool ContactDAO::add(const Contact &contact) {
     query->bindValue(":age", contact.age());
     query->bindValue(":phone", contact.phone());
     bool result = query->exec();
+    if(!result) {
+        error = query->lastError();
+        qDebug() << error.text();
+    }
     db_.close();
     return result;
 }
 
-bool ContactDAO::remove(const int id) { return false; }
+bool ContactDAO::remove(const int id) {
+    db_.open();
+    query = new QSqlQuery(db_);
+    query->prepare("DELETE FROM contact where id = :id");
+    query->bindValue(":id", id);
+    bool result = query->exec();
+    if(!result) {
+        error = query->lastError();
+        qDebug() << error.text();
+    }
+    return result;
+}
 
 QList<Contact> ContactDAO::getAll() {
     QList<Contact> contacts;
+    db_.open();
+    query = new QSqlQuery(db_);
+    query->exec("SELECT * FROM contact");
+    while(query->next()) {
+        contacts.append(Contact(query->value("id").toInt(),query->value("first_name").toString(), query->value("last_name").toString(), query->value("phone").toString(), query->value("age").toInt()));
+    }
+    db_.close();
     return contacts;
 }
 
 Contact ContactDAO::get(const int id) {
-
+    db_.open();
+    query = new QSqlQuery(db_);
+    query->prepare("SELECT * FROM contact where id = :id");
+    query->bindValue(":id", id);
+    if(query->next()) {
+        return  Contact(query->value("id").toInt(),query->value("first_name").toString(), query->value("last_name").toString(), query->value("phone").toString(), query->value("age").toInt()));
+    }
+    db_.close();
 }

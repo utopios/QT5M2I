@@ -10,17 +10,19 @@
 
 class Contact {
 public:
-    Contact(const QString& firstName, const QString& lastName, const QString& phone, const int age);
+    Contact(const int id,const QString& firstName, const QString& lastName, const QString& phone, const int age);
     QString firstName() const;
     QString lastName() const;
     QString phone() const;
     int age() const;
+    int id() const;
 
 private:
     QString firstName_;
     QString lastName_;
     QString phone_;
     int age_;
+    int id_;
 };
 
 

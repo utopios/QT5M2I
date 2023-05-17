@@ -6,6 +6,7 @@
 #define ANNUAIREDAO_BASEDAO_H
 
 #include <QSqlDatabase>
+#include <QSqlError>
 
 template <typename T>
 class BaseDAO {
@@ -21,6 +22,7 @@ public:
 protected:
     QSqlDatabase& db_;
     QSqlQuery* query;
+    QSqlError error;
 };
 
 
