@@ -8,12 +8,12 @@
 #include "ui_ContactWindow.h"
 
 
-ContactWindow::ContactWindow(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::ContactWindow) {
+ContactWindow::ContactWindow(QSqlDatabase database, QWidget *parent) :
+        QMainWindow(parent), ui(new Ui::ContactWindow), db_(database) {
     ui->setupUi(this);
     mainWidget = new QWidget();
     qvBoxLayout = new QVBoxLayout(mainWidget);
-    formWidget = new FormWidget(mainWidget);
+    formWidget = new FormWidget(db_,mainWidget);
     listContactsWidget = new ListContactsWidget(mainWidget);
     QObject::connect(formWidget, &FormWidget::contactAdded, listContactsWidget, &ListContactsWidget::handleContactAdded);
     qvBoxLayout->addWidget(formWidget);

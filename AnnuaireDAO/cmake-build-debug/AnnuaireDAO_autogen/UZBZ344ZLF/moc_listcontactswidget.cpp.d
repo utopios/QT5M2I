@@ -123,6 +123,8 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include/stdarg.h \
+  /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/entity/contact.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/QString \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qabstractitemmodel.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qalgorithms.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qarraydata.h \

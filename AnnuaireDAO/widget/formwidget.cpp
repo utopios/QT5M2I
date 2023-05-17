@@ -9,8 +9,8 @@
 #include "../dao/ContactDAO.h"
 
 
-FormWidget::FormWidget(QWidget *parent) :
-        QWidget(parent), ui(new Ui::FormWidget) {
+FormWidget::FormWidget(QSqlDatabase database, QWidget *parent) :
+        QWidget(parent), ui(new Ui::FormWidget), db_(database) {
     ui->setupUi(this);
     createContent();
 }
@@ -34,8 +34,9 @@ void FormWidget::createContent() {
 void FormWidget::handleValidButton() {
     //Appel à la dao
     Contact contact(0, firstNameEdit->text(), lastNameEdit->text(), phoneEdit->text(), ageEdit->value());
-    ContactDAO contactDao();
-    if(contactDao().add(contact)) {
+    ContactDAO contactDao(db_);
+    contactDao.init();
+    if(contactDao.add(contact)) {
         emit contactAdded(contact);
     }
 }

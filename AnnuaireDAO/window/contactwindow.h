@@ -6,6 +6,7 @@
 #define ANNUAIREDAO_CONTACTWINDOW_H
 
 #include <QMainWindow>
+#include <QSqlDatabase>
 #include "../widget/formwidget.h"
 #include "../widget/listcontactswidget.h"
 
@@ -18,11 +19,12 @@ class ContactWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit ContactWindow(QWidget *parent = nullptr);
+    explicit ContactWindow(QSqlDatabase database, QWidget *parent = nullptr);
 
     ~ContactWindow() override;
 
 private:
+    QSqlDatabase db_;
     Ui::ContactWindow *ui;
     QWidget* mainWidget;
     QVBoxLayout* qvBoxLayout;

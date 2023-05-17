@@ -123,8 +123,10 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include/stdarg.h \
+  /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/entity/contact.h \
   /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/formwidget.h \
   /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/listcontactswidget.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/QString \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qabstractitemmodel.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qalgorithms.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qarraydata.h \
@@ -214,6 +216,10 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qvalidator.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/QSqlDatabase \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qsqldatabase.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qtsql-config.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qtsqlglobal.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QFormLayout \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLayout \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \

@@ -162,6 +162,7 @@ AnnuaireDAO_autogen/timestamp: \
 	/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/listcontactswidget.h \
 	/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/window/contactwindow.cpp \
 	/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/window/contactwindow.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/QString \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qabstractitemmodel.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qalgorithms.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qarraydata.h \
@@ -251,6 +252,10 @@ AnnuaireDAO_autogen/timestamp: \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qvalidator.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/QSqlDatabase \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qsqldatabase.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qtsql-config.h \
+	/Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Versions/5/Headers/qtsqlglobal.h \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QFormLayout \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLayout \
 	/Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \

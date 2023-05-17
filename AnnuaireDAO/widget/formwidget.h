@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QSpinBox>
+#include <QSqlDatabase>
 #include "../entity/contact.h"
 
 
@@ -21,13 +22,14 @@ class FormWidget : public QWidget {
 Q_OBJECT
 
 public:
-    explicit FormWidget(QWidget *parent = nullptr);
+    explicit FormWidget(QSqlDatabase database, QWidget *parent = nullptr);
 
     ~FormWidget() override;
 
 signals:
     void contactAdded(Contact& contact);
 private:
+    QSqlDatabase db_;
     Ui::FormWidget *ui;
     QFormLayout* formLayout;
     QPushButton* validButton;
