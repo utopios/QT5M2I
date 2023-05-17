@@ -212,6 +212,7 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QListWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QPushButton \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QTableWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractbutton.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractitemdelegate.h \
@@ -229,6 +230,8 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyle.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyleoption.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabbar.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtableview.h \
+  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtablewidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabwidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgets-config.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtwidgetsglobal.h \

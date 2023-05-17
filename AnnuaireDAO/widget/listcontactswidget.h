@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QListWidget>
 #include <QPushButton>
+#include <QTableWidget>
 #include "../entity/contact.h"
 
 
@@ -26,6 +27,7 @@ public:
 private:
     Ui::ListContactsWidget *ui;
     QListWidget* qListWidget;
+    QTableWidget* tableWidget;
     QListWidgetItem* selectedItem;
     QPushButton* deleteButton;
     void createContent();
