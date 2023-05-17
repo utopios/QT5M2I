@@ -20,6 +20,7 @@ void FormWidget::createContent() {
     lastNameEdit = new QLineEdit(this);
     phoneEdit = new QLineEdit(this);
     ageEdit = new QSpinBox(this);
+    //ageEdit.setParent(this);
     validButton = new QPushButton("Valid", this);
     formLayout->addRow("First name", firstNameEdit);
     formLayout->addRow("last name", lastNameEdit);
