@@ -7,6 +7,8 @@
 #include <QVariant>
 #include "ContactDAO.h"
 #include <QDebug>
+
+
 void ContactDAO::init() {
     db_.open();
     if(!db_.tables().contains("contact")) {

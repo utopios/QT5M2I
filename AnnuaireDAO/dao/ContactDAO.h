@@ -12,7 +12,9 @@
 
 class ContactDAO : public BaseDAO<Contact> {
 public:
-    ContactDAO(QSqlDatabase& db): BaseDAO<Contact>(db) {}
+    ContactDAO(QSqlDatabase& db): BaseDAO<Contact>(db) {
+        db_ = db;
+    }
 
     void init() override;
     bool add(Contact& contact) override;
