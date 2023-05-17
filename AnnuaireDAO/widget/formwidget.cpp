@@ -15,20 +15,17 @@ FormWidget::FormWidget(QWidget *parent) :
 }
 
 void FormWidget::createContent() {
-    mainWidget = new QWidget();
-    formLayout = new  QFormLayout(mainWidget);
-    firstNameEdit = new QLineEdit(mainWidget);
-    lastNameEdit = new QLineEdit(mainWidget);
-    phoneEdit = new QLineEdit(mainWidget);
-    ageEdit = new QSpinBox(mainWidget);
-    validButton = new QPushButton("Valid", mainWidget);
-    deleteButton = new QPushButton("delete", mainWidget);
+    formLayout = new  QFormLayout(this);
+    firstNameEdit = new QLineEdit(this);
+    lastNameEdit = new QLineEdit(this);
+    phoneEdit = new QLineEdit(this);
+    ageEdit = new QSpinBox(this);
+    validButton = new QPushButton("Valid", this);
     formLayout->addRow("First name", firstNameEdit);
     formLayout->addRow("last name", lastNameEdit);
     formLayout->addRow("phone", phoneEdit);
     formLayout->addRow("age", ageEdit);
     formLayout->addWidget(validButton);
-    mainWidget->show();
 }
 
 FormWidget::~FormWidget() {

@@ -1,4 +1,4 @@
-/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/cmake-build-debug/AnnuaireDAO_autogen/DT2573FGAL/moc_contactwindow.cpp: /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/window/contactwindow.h \
+/Users/ihab/Desktop/QT5M2I/AnnuaireDAO/cmake-build-debug/AnnuaireDAO_autogen/UZBZ344ZLF/moc_listcontactswidget.cpp: /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/listcontactswidget.h \
   /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/cmake-build-debug/AnnuaireDAO_autogen/moc_predefs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -123,8 +123,6 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include/stdarg.h \
-  /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/formwidget.h \
-  /Users/ihab/Desktop/QT5M2I/AnnuaireDAO/widget/listcontactswidget.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qabstractitemmodel.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qalgorithms.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Versions/5/Headers/qarraydata.h \
@@ -199,28 +197,19 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qmatrix.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpaintdevice.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpalette.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpen.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpixelformat.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpixmap.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qpolygon.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qregion.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qrgb.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qrgba64.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtextcursor.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtextformat.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtextoption.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtgui-config.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtguiglobal.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qvalidator.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QFormLayout \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLayout \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QLineEdit \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QListWidget \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QMainWindow \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QPushButton \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QSpinBox \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/QWidget \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractbutton.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractitemdelegate.h \
@@ -228,21 +217,13 @@
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractscrollarea.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractslider.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qabstractspinbox.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qboxlayout.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qformlayout.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qframe.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qgridlayout.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlayout.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlayoutitem.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlineedit.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlistview.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qlistwidget.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qmainwindow.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qpushbutton.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qrubberband.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qsizepolicy.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qslider.h \
-  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qspinbox.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyle.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qstyleoption.h \
   /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Versions/5/Headers/qtabbar.h \

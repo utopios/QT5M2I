@@ -26,10 +26,8 @@ public:
 
 private:
     Ui::FormWidget *ui;
-    QWidget* mainWidget;
     QFormLayout* formLayout;
     QPushButton* validButton;
-    QPushButton* deleteButton;
     QLineEdit* firstNameEdit;
     QLineEdit* lastNameEdit;
     QLineEdit* phoneEdit;

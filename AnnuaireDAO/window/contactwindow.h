@@ -7,6 +7,7 @@
 
 #include <QMainWindow>
 #include "../widget/formwidget.h"
+#include "../widget/listcontactswidget.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -24,7 +25,9 @@ public:
 private:
     Ui::ContactWindow *ui;
     QWidget* mainWidget;
+    QVBoxLayout* qvBoxLayout;
     FormWidget* formWidget;
+    ListContactsWidget* listContactsWidget;
 };
 
 

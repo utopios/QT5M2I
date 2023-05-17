@@ -12,8 +12,11 @@ ContactWindow::ContactWindow(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::ContactWindow) {
     ui->setupUi(this);
     mainWidget = new QWidget();
+    qvBoxLayout = new QVBoxLayout(mainWidget);
     formWidget = new FormWidget(mainWidget);
-    formWidget->show();
+    listContactsWidget = new ListContactsWidget(mainWidget);
+    qvBoxLayout->addWidget(formWidget);
+    qvBoxLayout->addWidget(listContactsWidget);
     setCentralWidget(mainWidget);
 }
 
