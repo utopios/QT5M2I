@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     QDir().mkpath(dataFolderPath);
 
     QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
-//    database.setDatabaseName(dataFolderPath + "/demo.db");
+    database.setDatabaseName(dataFolderPath + "/demo.db");
 //    ContactDAO* contactDao = new ContactDAO(database);
 //    QList<Contact> contacts = contactDao->getAll();
     ContactWindow contactWindow(database);
