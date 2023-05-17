@@ -19,6 +19,7 @@ void ListContactsWidget::createContent() {
     //qListWidget = new QListWidget(this);
     QVBoxLayout* boxLayout = new QVBoxLayout(this);
     tableWidget = new QTableWidget(this);
+    tableWidget->setColumnCount(4);
     QStringList headers;
     headers << "First Name" << "Last Name" << "Phone" << "Age";
     tableWidget->setHorizontalHeaderLabels(headers);
