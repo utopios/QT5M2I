@@ -15,3 +15,5 @@ QString Contact::phone() const {return phone_;}
 int Contact::age() const {return age_;}
 
 int Contact::id() const {return id_;}
+
+void Contact::setId(const int id) {id_ = id;}

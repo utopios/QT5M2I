@@ -16,6 +16,7 @@ public:
     QString phone() const;
     int age() const;
     int id() const;
+    void setId(const int id);
 
 private:
     QString firstName_;

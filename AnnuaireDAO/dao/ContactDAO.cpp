@@ -20,7 +20,7 @@ void ContactDAO::init() {
     db_.close();
 }
 
-bool ContactDAO::add(const Contact &contact) {
+bool ContactDAO::add(Contact& contact) {
     db_.open();
     query = new QSqlQuery(db_);
     query->prepare("INSERT INTO contact (first_name, last_name, phone, age) values (:first_name, :last_name, :phone, :age)");
@@ -29,6 +29,10 @@ bool ContactDAO::add(const Contact &contact) {
     query->bindValue(":age", contact.age());
     query->bindValue(":phone", contact.phone());
     bool result = query->exec();
+    QVariant id = query->lastInsertId();
+    if(id.isValid()) {
+       contact.setId(id.toInt());
+    }
     if(!result) {
         error = query->lastError();
         qDebug() << error.text();
