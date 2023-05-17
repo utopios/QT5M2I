@@ -90,7 +90,22 @@ void ContactWindow::handleDeleteSelectedItem() {
     QMessageBox messageBox;
     messageBox.setText(selectedItem->text() + " "+ selectedItem->type());
     messageBox.exec();
-    delete selectedItem;
+    if(deleteContact(selectedItem->type())) {
+        delete selectedItem;
+    }
+}
+
+bool ContactWindow::deleteContact(int id) {
+    database.open();
+    query = new QSqlQuery(database);
+    query->prepare("DELETE FROM contact where id = :id");
+    query->bindValue(":id", id);
+    bool result = query->exec();
+    if(!result) {
+        error = query->lastError();
+        qDebug() << error.text();
+    }
+    return result;
 }
 
 void ContactWindow::getContacts() {

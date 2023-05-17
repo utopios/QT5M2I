@@ -46,7 +46,7 @@ private:
     void initContactTable();
     int addContact();
     void getContacts();
-    bool deleteContact();
+    bool deleteContact(int id);
 
 private slots:
     void handleValidButton();
