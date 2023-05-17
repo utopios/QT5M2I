@@ -12,7 +12,7 @@ template <typename T>
 class BaseDAO {
 
 public:
-    BaseDAO(QSqlDatabase &db);
+    BaseDAO(QSqlDatabase& db);
     virtual void init()  = 0;
     virtual bool add(T& contact) = 0;
     virtual bool remove(const int id) = 0;

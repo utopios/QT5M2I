@@ -10,6 +10,7 @@
 
 class Contact {
 public:
+    Contact() = default;
     Contact(const int id,const QString& firstName, const QString& lastName, const QString& phone, const int age);
     QString firstName() const;
     QString lastName() const;

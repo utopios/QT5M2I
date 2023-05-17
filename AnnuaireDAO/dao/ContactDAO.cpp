@@ -72,7 +72,10 @@ Contact ContactDAO::get(const int id) {
     query->prepare("SELECT * FROM contact where id = :id");
     query->bindValue(":id", id);
     if(query->next()) {
-        return  Contact(query->value("id").toInt(),query->value("first_name").toString(), query->value("last_name").toString(), query->value("phone").toString(), query->value("age").toInt()));
+        return  Contact(query->value("id").toInt(),query->value("first_name").toString(), query->value("last_name").toString(), query->value("phone").toString(), query->value("age").toInt());
     }
-    db_.close();
+
+    else {
+        return Contact();
+    }
 }
