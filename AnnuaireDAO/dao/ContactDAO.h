@@ -11,7 +11,14 @@
 #include "BaseDAO.h"
 
 class ContactDAO : public BaseDAO<Contact> {
+public:
+    ContactDAO(QSqlDatabase& db): BaseDAO<Contact>(db) {}
 
+    void init() override;
+    bool add(const Contact& contact) override;
+    bool remove(const int id) override;
+    QList<Contact> getAll() override;
+    Contact get(const int id) override;
 };
 
 

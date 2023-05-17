@@ -12,7 +12,7 @@ class BaseDAO {
 
 public:
     BaseDAO(QSqlDatabase &db);
-    virtual void init() const = 0;
+    virtual void init()  = 0;
     virtual bool add(const T& contact) = 0;
     virtual bool remove(const int id) = 0;
     virtual QList<T> getAll() = 0;
@@ -20,6 +20,7 @@ public:
 
 protected:
     QSqlDatabase& db_;
+    QSqlQuery* query;
 };
 
 
