@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QSqlTableModel>
+#include <QLineEdit>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,5 +18,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QSqlTableModel* model;
+    QLineEdit* line;
+
+private slots:
+    void handleAdd();
 };
 #endif // MAINWINDOW_H

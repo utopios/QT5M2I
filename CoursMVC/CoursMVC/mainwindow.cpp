@@ -9,6 +9,7 @@
 #include <QSqlTableModel>
 #include <QDir>
 #include <QSqlQuery>
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -21,18 +22,19 @@ MainWindow::MainWindow(QWidget *parent)
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(dataFolderPath + "/mydatabase.db");
     //Création d'une table exemple
-    QSqlQuery query;
-    query.exec("CREATE TABLE items(name TEXT)");
-
+    db.open();
+    QSqlQuery query(db);
+    bool result = query.exec("CREATE TABLE items(name TEXT)");
+    qDebug() << result;
     //Widget pour demo
     QWidget* widget = new QWidget(this);
     QVBoxLayout* boxLayout = new QVBoxLayout(widget);
 
     //Bouton pour ajouter
     QPushButton* button = new QPushButton("ajouter", widget);
-
+    QObject::connect(button, &QPushButton::clicked, this, &MainWindow::handleAdd);
     //View
-    QLineEdit* line = new QLineEdit(widget);
+    line = new QLineEdit(widget);
     QListView* listView = new QListView(widget);
 
     //Model
@@ -42,13 +44,10 @@ MainWindow::MainWindow(QWidget *parent)
 //    model->setData(model->index(model->rowCount() -1 ), "toto");
 
 //    //Ouvrir une boite de dialogue pour modifier le model
-//    QObject::connect(button, &QPushButton::clicked, [&]() {
-//        model->insertRow(model->rowCount());
-//        model->setData(model->index(model->rowCount() -1 ), line->text());
-//    });
+
 
     //Model QSqlTableModel
-    QSqlTableModel* model = new QSqlTableModel(listView,db);
+    model = new QSqlTableModel(listView,db);
     model->setTable("items");
     model->select();
     //Bind du mode lavec la vue
@@ -59,6 +58,13 @@ MainWindow::MainWindow(QWidget *parent)
     boxLayout->addWidget(button);
     setCentralWidget(widget);
 
+
+}
+
+void MainWindow::handleAdd() {
+    model->insertRow(model->rowCount());
+    model->setData(model->index(model->rowCount() -1, 0), line->text());
+    model->submitAll();
 
 }
 
