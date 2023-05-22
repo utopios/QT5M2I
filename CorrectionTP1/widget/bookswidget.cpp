@@ -7,6 +7,7 @@
 #include "bookswidget.h"
 #include "ui_BooksWidget.h"
 #include "../dao/BookDAO.h"
+#include "../util/DataBaseManager.h"
 
 
 BooksWidget::BooksWidget(QWidget *parent) :
@@ -16,6 +17,7 @@ BooksWidget::BooksWidget(QWidget *parent) :
 }
 
 void BooksWidget::createContent() {
+    db_ = DataBaseManager::get()->db();
     tableWidget = new QTableWidget(this);
     QStringList headers;
     headers << "Id" << "Titre" << "ISBN" << "Auteur";
