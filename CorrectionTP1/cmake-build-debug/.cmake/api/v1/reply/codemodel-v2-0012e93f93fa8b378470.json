@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CorrectionTP1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CorrectionTP1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CorrectionTP1-Debug-249fb63247cfdaf014a7.json",
+					"name" : "CorrectionTP1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CorrectionTP1_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CorrectionTP1_autogen-Debug-b719ff90500559fa4a29.json",
+					"name" : "CorrectionTP1_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CorrectionTP1_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CorrectionTP1_autogen_timestamp_deps-Debug-e1ea2bacd76c76021218.json",
+					"name" : "CorrectionTP1_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/ihab/Desktop/QT5M2I/CorrectionTP1/cmake-build-debug",
+		"source" : "/Users/ihab/Desktop/QT5M2I/CorrectionTP1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
