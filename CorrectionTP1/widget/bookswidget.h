@@ -6,6 +6,9 @@
 #define CORRECTIONTP1_BOOKSWIDGET_H
 
 #include <QWidget>
+#include <QTableWidget>
+#include <QSqlDatabase>
+#include "../entity/Book.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +25,13 @@ public:
 
 private:
     Ui::BooksWidget *ui;
+    QSqlDatabase db_;
+    QTableWidget* tableWidget;
+    int count;
+    void createContent();
+
+public slots:
+    void handleBookAdded(Book& book);
 };
 
 

@@ -61,5 +61,6 @@ void BookFormWidget::handleAddButton() {
 
 BookFormWidget::~BookFormWidget() {
     delete ui;
+    delete selectedBook;
 }
 
