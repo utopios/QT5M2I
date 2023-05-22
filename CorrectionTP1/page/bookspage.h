@@ -6,6 +6,8 @@
 #define CORRECTIONTP1_BOOKSPAGE_H
 
 #include <QWidget>
+#include "../widget/bookformwidget.h"
+#include "../widget/bookswidget.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +24,11 @@ public:
 
 private:
     Ui::BooksPage *ui;
+    QWidget* mainWidget;
+    BookFormWidget* formWidget;
+    BooksWidget* booksWidget;
+
+    void createContent();
 };
 
 

@@ -21,16 +21,19 @@ void BookFormWidget::createContent() {
     authorEdit = new QLineEdit(this);
     isbnEdit = new QLineEdit(this);
     QWidget qHWidget(this);
-    QHBoxLayout boxLayout(this);
+    QHBoxLayout boxLayout(&qHWidget);
     addButton = new QPushButton("add", &qHWidget);
     deleteButton = new QPushButton("delete", &qHWidget);
     boxLayout.addWidget(addButton);
     boxLayout.addWidget(deleteButton);
-    qHWidget.setLayout(&boxLayout);
+    //qHWidget.setLayout(&boxLayout);
+
     formLayout->addRow("Titre", titleEdit);
     formLayout->addRow("ISBN", isbnEdit);
     formLayout->addRow("Auteur", authorEdit);
-    formLayout->addWidget(&qHWidget);
+    formLayout->addWidget(addButton);
+    formLayout->addWidget(deleteButton);
+    //qHWidget.show();
     QObject::connect(addButton, &QPushButton::clicked, this, &BookFormWidget::handleAddButton);
     QObject::connect(deleteButton, &QPushButton::clicked, this, &BookFormWidget::handleDeleteButton);
 }

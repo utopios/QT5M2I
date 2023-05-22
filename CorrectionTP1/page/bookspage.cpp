@@ -11,6 +11,18 @@
 BooksPage::BooksPage(QWidget *parent) :
         QWidget(parent), ui(new Ui::BooksPage) {
     ui->setupUi(this);
+    createContent();
+}
+
+void BooksPage::createContent() {
+    //mainWidget = new QWidget(this);
+    QVBoxLayout boxLayout(this);
+    formWidget = new BookFormWidget(mainWidget);
+    booksWidget = new BooksWidget(mainWidget);
+    boxLayout.addWidget(formWidget);
+    boxLayout.addWidget(booksWidget);
+    //mainWidget->setLayout(&boxLayout);
+    QObject::connect(formWidget, &BookFormWidget::bookAdded, booksWidget, &BooksWidget::handleBookAdded);
 }
 
 BooksPage::~BooksPage() {
