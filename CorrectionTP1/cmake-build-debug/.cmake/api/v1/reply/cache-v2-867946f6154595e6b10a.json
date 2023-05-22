@@ -1138,6 +1138,18 @@
 			"value" : "/Users/ihab/Qt/5.15.2/clang_64/lib/cmake/Qt5Gui"
 		},
 		{
+			"name" : "Qt5Sql_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt5Sql."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/Users/ihab/Qt/5.15.2/clang_64/lib/cmake/Qt5Sql"
+		},
+		{
 			"name" : "Qt5Widgets_DIR",
 			"properties" : 
 			[

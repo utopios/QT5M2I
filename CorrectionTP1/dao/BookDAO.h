@@ -6,8 +6,19 @@
 #define CORRECTIONTP1_BOOKDAO_H
 
 
-class BookDAO {
+#include "BaseDAO.h"
+#include "../entity/Book.h"
 
+class BookDAO: public BaseDAO<Book>{
+public:
+    BookDAO(QSqlDatabase& db): BaseDAO<Book>(db) {
+
+    }
+    void init() override;
+    bool add(Book& book) override;
+    QList<Book> getAll() override;
+    Book get(const int id) override;
+    bool remove(const int id) override;
 };
 
 

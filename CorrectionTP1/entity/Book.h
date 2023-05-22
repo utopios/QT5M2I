@@ -6,8 +6,22 @@
 #define CORRECTIONTP1_BOOK_H
 
 
-class Book {
+#include <QString>
 
+class Book {
+public:
+    Book() = default;
+    Book(const int id, const QString& title, const QString& isbn, const QString& author);
+    int id() const;
+    QString title() const;
+    QString isbn() const;
+    QString author() const;
+    void setId(const int id);
+private:
+    int id_;
+    QString title_;
+    QString isbn_;
+    QString author_;
 };
 
 
