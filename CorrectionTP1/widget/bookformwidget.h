@@ -9,6 +9,7 @@
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QSqlDatabase>
 #include "../entity/Book.h"
 
 
@@ -30,12 +31,14 @@ signals:
 private:
     Ui::BookFormWidget *ui;
     QFormLayout* formLayout;
+    QSqlDatabase db_;
     QLineEdit* titleEdit;
     QLineEdit* isbnEdit;
     QLineEdit* authorEdit;
     QPushButton* addButton;
     QPushButton* deleteButton;
     Book* selectedBook;
+    void createContent();
 public slots:
     void getBookToDelete(Book& book);
 private slots:
