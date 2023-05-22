@@ -19,8 +19,10 @@ BooksWidget::BooksWidget(QWidget *parent) :
 void BooksWidget::createContent() {
     db_ = DataBaseManager::get()->db();
     tableWidget = new QTableWidget(this);
+    tableWidget->resize(450,500);
     QStringList headers;
     headers << "Id" << "Titre" << "ISBN" << "Auteur";
+    tableWidget->setColumnCount(4);
     tableWidget->setHorizontalHeaderLabels(headers);
     BookDAO bookDao(db_);
     QList<Book> books = bookDao.getAll();
