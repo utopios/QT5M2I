@@ -172,6 +172,8 @@ CorrectionTP1_autogen/timestamp: \
 	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/page/loanpage.h \
 	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/page/userspage.cpp \
 	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/page/userspage.h \
+	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/util/DataBaseManager.cpp \
+	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/util/DataBaseManager.h \
 	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/widget/bookformwidget.cpp \
 	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/widget/bookformwidget.h \
 	/Users/ihab/Desktop/QT5M2I/CorrectionTP1/widget/bookswidget.cpp \

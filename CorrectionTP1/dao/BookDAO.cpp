@@ -8,7 +8,7 @@
 #include <QDebug>
 void BookDAO::init() {
     db_.open();
-    if(db_.tables().contains("book")) {
+    if(!db_.tables().contains("book")) {
         query = new QSqlQuery(db_);
         bool result = query->exec("CREATE TABLE book(id INTEGER PRIMARY KEY, title varchar, isbn varchar, author varchar)");
         //Pour les autres dao, on crée les autres tables
