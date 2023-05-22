@@ -224,6 +224,14 @@ build CMakeFiles/CorrectionTP1.dir/dao/BookDAO.cpp.o: CXX_COMPILER__CorrectionTP
   OBJECT_DIR = CMakeFiles/CorrectionTP1.dir
   OBJECT_FILE_DIR = CMakeFiles/CorrectionTP1.dir/dao
 
+build CMakeFiles/CorrectionTP1.dir/util/DataBaseManager.cpp.o: CXX_COMPILER__CorrectionTP1_Debug /Users/ihab/Desktop/QT5M2I/CorrectionTP1/util/DataBaseManager.cpp || cmake_object_order_depends_target_CorrectionTP1
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/CorrectionTP1.dir/util/DataBaseManager.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -fPIC -std=gnu++2a
+  INCLUDES = -I/Users/ihab/Desktop/QT5M2I/CorrectionTP1/cmake-build-debug/CorrectionTP1_autogen/include -iframework /Users/ihab/Qt/5.15.2/clang_64/lib -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/./mkspecs/macx-clang -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -isystem /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/Headers
+  OBJECT_DIR = CMakeFiles/CorrectionTP1.dir
+  OBJECT_FILE_DIR = CMakeFiles/CorrectionTP1.dir/util
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CorrectionTP1
@@ -232,7 +240,7 @@ build CMakeFiles/CorrectionTP1.dir/dao/BookDAO.cpp.o: CXX_COMPILER__CorrectionTP
 #############################################
 # Link the executable CorrectionTP1
 
-build CorrectionTP1: CXX_EXECUTABLE_LINKER__CorrectionTP1_Debug CMakeFiles/CorrectionTP1.dir/CorrectionTP1_autogen/mocs_compilation.cpp.o CMakeFiles/CorrectionTP1.dir/main.cpp.o CMakeFiles/CorrectionTP1.dir/mainwindow.cpp.o CMakeFiles/CorrectionTP1.dir/page/bookspage.cpp.o CMakeFiles/CorrectionTP1.dir/page/userspage.cpp.o CMakeFiles/CorrectionTP1.dir/page/loanpage.cpp.o CMakeFiles/CorrectionTP1.dir/widget/bookformwidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/bookswidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/userformwidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/userswidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/loanformwidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/loanswidget.cpp.o CMakeFiles/CorrectionTP1.dir/entity/Book.cpp.o CMakeFiles/CorrectionTP1.dir/entity/User.cpp.o CMakeFiles/CorrectionTP1.dir/entity/Loan.cpp.o CMakeFiles/CorrectionTP1.dir/dao/BaseDAO.cpp.o CMakeFiles/CorrectionTP1.dir/dao/UserDAO.cpp.o CMakeFiles/CorrectionTP1.dir/dao/LoanDAO.cpp.o CMakeFiles/CorrectionTP1.dir/dao/BookDAO.cpp.o | /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore || CorrectionTP1_autogen CorrectionTP1_autogen_timestamp_deps
+build CorrectionTP1: CXX_EXECUTABLE_LINKER__CorrectionTP1_Debug CMakeFiles/CorrectionTP1.dir/CorrectionTP1_autogen/mocs_compilation.cpp.o CMakeFiles/CorrectionTP1.dir/main.cpp.o CMakeFiles/CorrectionTP1.dir/mainwindow.cpp.o CMakeFiles/CorrectionTP1.dir/page/bookspage.cpp.o CMakeFiles/CorrectionTP1.dir/page/userspage.cpp.o CMakeFiles/CorrectionTP1.dir/page/loanpage.cpp.o CMakeFiles/CorrectionTP1.dir/widget/bookformwidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/bookswidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/userformwidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/userswidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/loanformwidget.cpp.o CMakeFiles/CorrectionTP1.dir/widget/loanswidget.cpp.o CMakeFiles/CorrectionTP1.dir/entity/Book.cpp.o CMakeFiles/CorrectionTP1.dir/entity/User.cpp.o CMakeFiles/CorrectionTP1.dir/entity/Loan.cpp.o CMakeFiles/CorrectionTP1.dir/dao/BaseDAO.cpp.o CMakeFiles/CorrectionTP1.dir/dao/UserDAO.cpp.o CMakeFiles/CorrectionTP1.dir/dao/LoanDAO.cpp.o CMakeFiles/CorrectionTP1.dir/dao/BookDAO.cpp.o CMakeFiles/CorrectionTP1.dir/util/DataBaseManager.cpp.o | /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore || CorrectionTP1_autogen CorrectionTP1_autogen_timestamp_deps
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/ihab/Qt/5.15.2/clang_64/lib  /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets  /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql  /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui  /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore
   OBJECT_DIR = CMakeFiles/CorrectionTP1.dir
@@ -267,7 +275,7 @@ build CorrectionTP1_autogen/timestamp CorrectionTP1_autogen/mocs_compilation.cpp
 #############################################
 # Phony custom command for CMakeFiles/CorrectionTP1_autogen_timestamp_deps
 
-build CMakeFiles/CorrectionTP1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/CorrectionTP1_autogen_timestamp_deps: phony /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore /Users/ihab/Qt/5.15.2/clang_64/bin/moc /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/bin/uic /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql
+build CMakeFiles/CorrectionTP1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/CorrectionTP1_autogen_timestamp_deps: phony /Users/ihab/Qt/5.15.2/clang_64/lib/QtCore.framework/QtCore /Users/ihab/Qt/5.15.2/clang_64/bin/moc /Users/ihab/Qt/5.15.2/clang_64/lib/QtWidgets.framework/QtWidgets /Users/ihab/Qt/5.15.2/clang_64/lib/QtGui.framework/QtGui /Users/ihab/Qt/5.15.2/clang_64/bin/uic /Users/ihab/Qt/5.15.2/clang_64/lib/QtSql.framework/QtSql
 
 
 #############################################

@@ -7,6 +7,7 @@
 #include "bookformwidget.h"
 #include "ui_BookFormWidget.h"
 #include "../dao/BookDAO.h"
+#include "../util/DataBaseManager.h"
 
 
 BookFormWidget::BookFormWidget(QWidget *parent) :
@@ -16,6 +17,7 @@ BookFormWidget::BookFormWidget(QWidget *parent) :
 }
 
 void BookFormWidget::createContent() {
+    db_ = DataBaseManager::get()->db();
     formLayout = new QFormLayout(this);
     titleEdit = new QLineEdit(this);
     authorEdit = new QLineEdit(this);
