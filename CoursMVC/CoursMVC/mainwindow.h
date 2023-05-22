@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSqlTableModel>
 #include <QLineEdit>
+#include <QListView>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,8 +21,10 @@ private:
     Ui::MainWindow *ui;
     QSqlTableModel* model;
     QLineEdit* line;
+    QListView* listView;
 
 private slots:
     void handleAdd();
+    void handleDelete();
 };
 #endif // MAINWINDOW_H

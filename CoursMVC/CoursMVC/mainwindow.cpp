@@ -32,10 +32,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Bouton pour ajouter
     QPushButton* button = new QPushButton("ajouter", widget);
+    QPushButton* buttonDelete = new QPushButton("suppprimer", widget);
     QObject::connect(button, &QPushButton::clicked, this, &MainWindow::handleAdd);
+    QObject::connect(buttonDelete, &QPushButton::clicked, this, &MainWindow::handleDelete);
     //View
     line = new QLineEdit(widget);
-    QListView* listView = new QListView(widget);
+    listView = new QListView(widget);
 
     //Model
 //    QStringListModel* model = new QStringListModel();
@@ -56,6 +58,7 @@ MainWindow::MainWindow(QWidget *parent)
     boxLayout->addWidget(listView);
     boxLayout->addWidget(line);
     boxLayout->addWidget(button);
+    boxLayout->addWidget(buttonDelete);
     setCentralWidget(widget);
 
 
@@ -64,6 +67,13 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::handleAdd() {
     model->insertRow(model->rowCount());
     model->setData(model->index(model->rowCount() -1, 0), line->text());
+    model->submitAll();
+
+}
+
+void MainWindow::handleDelete() {
+    QModelIndex index = listView->currentIndex();
+    model->removeRow(index.row());
     model->submitAll();
 
 }
