@@ -1,11 +1,11 @@
 #include "mainwindow.h"
-
+#include "taskwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    TaskWindow w;
     w.show();
     return a.exec();
 }
