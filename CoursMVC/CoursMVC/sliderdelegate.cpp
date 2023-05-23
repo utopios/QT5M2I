@@ -3,7 +3,8 @@
 
 QWidget* SliderDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &index) const {
     QSlider *slider = new QSlider(parent);
-    slider->setRange(0,1000);
+    slider->setOrientation(Qt::Horizontal);
+    slider->setRange(0,10);
     return slider;
 }
 
