@@ -14,9 +14,10 @@ TaskWindow::TaskWindow(QWidget *parent) :
     QDir().mkpath(dataFolderPath);
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(dataFolderPath + "/mydatabase.db");
+    qDebug() << dataFolderPath + "/mydatabase.db";
     db.open();
     QSqlQuery query(db);
-    bool result = query.exec("CREATE TABLE task (id integer PRIMARY KEY, name varchar, date TEXT))");
+    bool result = query.exec("CREATE TABLE task (id INTEGER PRIMARY KEY, name varchar, date TEXT)");
     qDebug() << result;
     createContent(db);
 }
@@ -30,6 +31,7 @@ void TaskWindow::createContent(QSqlDatabase& db) {
     model->setTable("task");
     model->select();
     tableView->setModel(model);
+
 
     nameLine = new QLineEdit(widget);
     dateLine = new QDateEdit(widget);
