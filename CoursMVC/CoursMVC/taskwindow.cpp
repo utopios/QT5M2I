@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QDebug>
 #include <QSqlRecord>
+#include "completeddelegate.h"
 TaskWindow::TaskWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TaskWindow)
@@ -17,7 +18,7 @@ TaskWindow::TaskWindow(QWidget *parent) :
     qDebug() << dataFolderPath + "/mydatabase.db";
     db.open();
     QSqlQuery query(db);
-    bool result = query.exec("CREATE TABLE task (id INTEGER PRIMARY KEY, name varchar, date TEXT)");
+    bool result = query.exec("CREATE TABLE task (id INTEGER PRIMARY KEY, name varchar, date TEXT, completed BOOLEAN)");
     qDebug() << result;
     createContent(db);
 }
@@ -31,7 +32,7 @@ void TaskWindow::createContent(QSqlDatabase& db) {
     model->setTable("task");
     model->select();
     tableView->setModel(model);
-
+    tableView->setItemDelegateForColumn(3, new CompletedDelegate(tableView));
 
     nameLine = new QLineEdit(widget);
     dateLine = new QDateEdit(widget);
@@ -59,6 +60,7 @@ void TaskWindow::handleAdd() {
     QSqlRecord record = model->record();
     record.setValue("name", nameLine->text());
     record.setValue("date", dateLine->date());
+    record.setValue("completed", false);
     model->insertRecord(-1, record);
     handleSubmit();
 }
