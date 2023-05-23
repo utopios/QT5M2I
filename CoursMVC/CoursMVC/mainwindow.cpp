@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // View => TableView
     tableView = new QTableView(widget);
-    tableView->setItemDelegateForColumn(2, new SliderDelegate(tableView));
+    tableView->setItemDelegateForColumn(1, new SliderDelegate(tableView));
 
     //Model
 //    QStringListModel* model = new QStringListModel();

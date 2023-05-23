@@ -14,7 +14,7 @@ void SliderDelegate::setEditorData(QWidget *editor, const QModelIndex &index) co
     }
 }
 
-void setModelData(QWidget *editor,QAbstractItemModel *model, const QModelIndex &index)  {
+void SliderDelegate::setModelData(QWidget *editor,QAbstractItemModel *model, const QModelIndex &index) const {
     QSlider *slider = qobject_cast<QSlider*>(editor);
     if(slider) {
         model->setData(index, slider->value());
