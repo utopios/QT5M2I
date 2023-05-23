@@ -10,6 +10,7 @@
 #include <QDir>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QSqlRecord>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -24,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     //Création d'une table exemple
     db.open();
     QSqlQuery query(db);
-    bool result = query.exec("CREATE TABLE items(name TEXT)");
+    bool result = query.exec("CREATE TABLE itemsBis(name TEXT, status int )");
     qDebug() << result;
     //Widget pour demo
     QWidget* widget = new QWidget(this);
@@ -35,9 +36,14 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton* buttonDelete = new QPushButton("suppprimer", widget);
     QObject::connect(button, &QPushButton::clicked, this, &MainWindow::handleAdd);
     QObject::connect(buttonDelete, &QPushButton::clicked, this, &MainWindow::handleDelete);
-    //View
+
     line = new QLineEdit(widget);
+
+    //View => listView
     listView = new QListView(widget);
+
+    // View => TableView
+    tableView = new QTableView(widget);
 
     //Model
 //    QStringListModel* model = new QStringListModel();
@@ -49,13 +55,18 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     //Model QSqlTableModel
-    model = new QSqlTableModel(listView,db);
-    model->setTable("items");
+    //model = new QSqlTableModel(listView,db);
+    model = new QSqlTableModel(tableView,db);
+    //model->setTable("items");
+    model->setTable("itemsBis");
     model->select();
     //Bind du mode lavec la vue
-    listView->setModel(model);
+    //listView->setModel(model);
 
-    boxLayout->addWidget(listView);
+    tableView->setModel(model);
+
+    //boxLayout->addWidget(listView);
+    boxLayout->addWidget(tableView);
     boxLayout->addWidget(line);
     boxLayout->addWidget(button);
     boxLayout->addWidget(buttonDelete);
@@ -65,16 +76,23 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::handleAdd() {
-    model->insertRow(model->rowCount());
-    model->setData(model->index(model->rowCount() -1, 0), line->text());
+//    model->insertRow(model->rowCount());
+//    model->setData(model->index(model->rowCount() -1, 0), line->text());
+    QSqlRecord record = model->record();
+    record.setValue("name", line->text());
+    record.setValue("status", 0);
+    model->insertRecord(-1, record);
     model->submitAll();
 
 }
 
 void MainWindow::handleDelete() {
-    QModelIndex index = listView->currentIndex();
-    model->removeRow(index.row());
+    //QModelIndex index = listView->currentIndex();
+    QItemSelectionModel *selection = tableView->selectionModel();
+    //model->removeRow(index.row());
+    model->removeRow(selection->currentIndex().row());
     model->submitAll();
+    model->select();
 
 }
 
