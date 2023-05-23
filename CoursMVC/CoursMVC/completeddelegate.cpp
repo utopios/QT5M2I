@@ -19,3 +19,19 @@ void CompletedDelegate::setModelData(QWidget *editor,QAbstractItemModel *model, 
         model->setData(index, checkbox->isChecked());
     }
 }
+
+void CompletedDelegate::paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const {
+    QStyleOptionViewItem opt = option;
+    initStyleOption(&opt, index);
+    if(index.data().toBool()) {
+        opt.text= "Done";
+        opt.palette.setColor(QPalette::Text, Qt::green);
+    }
+    else {
+        opt.text = "Not Done";
+        opt.palette.setColor(QPalette::Text, Qt::red);
+    }
+    const QWidget *widget = option.widget;
+    QStyle *style = widget->style();
+    style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
+}
