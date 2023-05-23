@@ -3,6 +3,7 @@
 
 QWidget* CompletedDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &index) const {
     QCheckBox* checkbox = new QCheckBox(parent);
+    checkbox->setStyleSheet("width:100%; margin:auto");
     return checkbox;
 }
 
@@ -15,6 +16,7 @@ void CompletedDelegate::setEditorData(QWidget *editor, const QModelIndex &index)
 
 void CompletedDelegate::setModelData(QWidget *editor,QAbstractItemModel *model, const QModelIndex &index) const {
     QCheckBox *checkbox = qobject_cast<QCheckBox*>(editor);
+
     if(checkbox) {
         model->setData(index, checkbox->isChecked());
     }
