@@ -11,6 +11,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QSqlRecord>
+#include "sliderdelegate.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -44,6 +45,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // View => TableView
     tableView = new QTableView(widget);
+    tableView->setItemDelegateForColumn(2, new SliderDelegate(tableView));
 
     //Model
 //    QStringListModel* model = new QStringListModel();

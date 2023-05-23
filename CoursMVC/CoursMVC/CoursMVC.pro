@@ -12,11 +12,13 @@ SOURCES += \
     customdatamodel.cpp \
     main.cpp \
     mainwindow.cpp \
+    sliderdelegate.cpp \
     taskwindow.cpp
 
 HEADERS += \
     customdatamodel.h \
     mainwindow.h \
+    sliderdelegate.h \
     taskwindow.h
 
 FORMS += \
