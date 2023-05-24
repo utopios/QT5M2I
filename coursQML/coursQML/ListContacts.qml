@@ -6,11 +6,21 @@ ListView {
     width: 300
     height: 100
     delegate: RowLayout {
-        Repeater {
-          model: contactModel.columnCount()
-          Text {
-              text: contactModel.data(contactModel.index(index, modelData))
-          }
+//        Repeater {
+//          model: contactModel.columnCount()
+//          Text {
+//              text: contactModel.data(contactModel.index(index, modelData))
+//          }
+//        }
+
+        Text {
+            text: contactModel.getField(index, "firstName")
+        }
+        Text {
+            text: contactModel.getField(index, "lastName")
+        }
+        Text {
+            text: contactModel.getField(index, "phone")
         }
     }
 

@@ -14,3 +14,12 @@ void ContactModel::addRecord(const QString& firstName, const QString& lastName, 
     insertRecord(-1, record);
     submitAll();
 }
+
+
+QVariant ContactModel::getField(int row, const QString& fieldName) {
+    int col = fieldIndex(fieldName);
+    if(col == -1) {
+        return QVariant();
+    }
+    return QSqlTableModel::data(index(row, col));
+}

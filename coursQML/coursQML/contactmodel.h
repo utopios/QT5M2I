@@ -29,6 +29,7 @@ public:
         select();
     }
     Q_INVOKABLE void addRecord(const QString& firstName, const QString& lastName, const QString& phone);
+    Q_INVOKABLE QVariant getField(int row, const QString& fieldName);
     ~ContactModel();
 };
 

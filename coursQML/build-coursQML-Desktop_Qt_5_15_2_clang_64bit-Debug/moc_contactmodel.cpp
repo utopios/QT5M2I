@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ContactModel_t {
-    QByteArrayData data[6];
-    char stringdata0[49];
+    QByteArrayData data[9];
+    char stringdata0[72];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,11 +37,14 @@ QT_MOC_LITERAL(1, 13, 9), // "addRecord"
 QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 9), // "firstName"
 QT_MOC_LITERAL(4, 34, 8), // "lastName"
-QT_MOC_LITERAL(5, 43, 5) // "phone"
+QT_MOC_LITERAL(5, 43, 5), // "phone"
+QT_MOC_LITERAL(6, 49, 8), // "getField"
+QT_MOC_LITERAL(7, 58, 3), // "row"
+QT_MOC_LITERAL(8, 62, 9) // "fieldName"
 
     },
     "ContactModel\0addRecord\0\0firstName\0"
-    "lastName\0phone"
+    "lastName\0phone\0getField\0row\0fieldName"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,7 +54,7 @@ static const uint qt_meta_data_ContactModel[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,10 +62,12 @@ static const uint qt_meta_data_ContactModel[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags
-       1,    3,   19,    2, 0x02 /* Public */,
+       1,    3,   24,    2, 0x02 /* Public */,
+       6,    2,   31,    2, 0x02 /* Public */,
 
  // methods: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,
+    QMetaType::QVariant, QMetaType::Int, QMetaType::QString,    7,    8,
 
        0        // eod
 };
@@ -74,6 +79,8 @@ void ContactModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->addRecord((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
+        case 1: { QVariant _r = _t->getField((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QVariant*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -108,13 +115,13 @@ int ContactModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
