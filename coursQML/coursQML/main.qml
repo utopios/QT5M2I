@@ -149,10 +149,10 @@ Window {
 //     }
     //Correction Contact Form
     ColumnLayout {
-        ListModel {
-        id: contactModel
-        ListElement {firstName: "toto"; lastName:"titi"; phone:"010101010"}
-        }
+//        ListModel {
+//        id: contactModel
+//        ListElement {firstName: "toto"; lastName:"titi"; phone:"010101010"}
+//        }
 
         anchors.centerIn: parent
 
