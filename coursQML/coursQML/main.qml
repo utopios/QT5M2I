@@ -1,6 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
-
+import QtQuick.Controls 2.15
 Window {
     width: 640
     height: 480
@@ -21,6 +21,10 @@ Window {
                 text: "Im Ihab"
                 color: "#cd2127"
                 //anchors.centerIn: parent
+            }
+            Button {
+                text: "Buton 1"
+                //background: "#cd2127"
             }
         }
 
