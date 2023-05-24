@@ -81,118 +81,162 @@ Window {
 //              Layout.column: 0
 //          }
 //      }
-     ColumnLayout {
-         anchors.centerIn: parent
-         Column {
+//     ColumnLayout {
+//         anchors.centerIn: parent
+//         Column {
 
-             Row {
-                 ListModel {
-                     id: fieldModel
-                     ListElement {name: "toto"}
-                 }
-                 ListView {
-                     id: fieldsList
-                     model: fieldModel
-                     width: 300
-                     height: 200
-                     delegate: Text {
-                         text: name
-                     }
-                 }
-             }
-             Row {
-                 Text {
-                     text: "Field 1"
-                 }
-                 TextField {
-                     id: field1
-                     width: 200
-                     placeholderText: "Text Field 1"
-                 }
-             }
-             Row {
-                 Button {
-                     text: "b1"
-                     onClicked: () => {
-                                    console.log(field1.text)
-                                    fieldModel.append({name: field1.text})
-                                    field1.text = ""
-                                }
-                 }
-             }
-         }
+//             Row {
+//                 ListModel {
+//                     id: fieldModel
+//                     ListElement {name: "toto"}
+//                 }
+//                 ScrollView {
+//                     width: 300
+//                     height: 100
+//                     //listView
+////                     ListView {
+////                         id: fieldsList
+////                         model: fieldModel
+////                         width: 300
+////                         height: 100
+////                         delegate: Text {
+////                             text: name
+////                         }
+////                     }
+//                     //TableView
+//                     TableView {
+//                         id: fieldsList
+//                         model: fieldModel
+////                         TableViewColumn {
+////                             role: "name"
+////                             title: "Field 1"
+////                         }
+//                         delegate: Text {
+//                             text: name
+//                         }
+//                     }
+//                 }
 
 
+//             }
+//             Row {
+//                 Text {
+//                     text: "Field 1"
+//                 }
+//                 TextField {
+//                     id: field1
+//                     width: 200
+//                     placeholderText: "Text Field 1"
+//                 }
+//             }
+//             Row {
+//                 Button {
+//                     text: "b1"
+//                     onClicked: () => {
+//                                    console.log(field1.text)
+//                                    fieldModel.append({name: field1.text})
+//                                    field1.text = ""
+//                                }
+//                 }
+//             }
+//         }
 
 
 
 
-     }
+
+
+//     }
     //Correction Contact Form
-//    ColumnLayout {
-//        anchors.centerIn: parent
-//        Text {
-//            id: message
-//        }
+    ColumnLayout {
+        ListModel {
+        id: contactModel
+        ListElement {firstName: "toto"; lastName:"titi"; phone:"010101010"}
+        }
 
-//        Rectangle {
-//            id: rectError
-//            //width:300
-//            border.color: "red"
+        anchors.centerIn: parent
+        Text {
+            id: message
+        }
 
-//        }
+        Rectangle {
+            id: rectError
+            //width:300
+            border.color: "red"
 
-//        TextField {
-//            id: firstName
-//            width: 300
-//            placeholderText: "Prénom"
-//            states: [
-//                State {
-//                    name: "NORMAL"
-//                    PropertyChanges {
-//                        target: firstName;
-//                        color: "green"
-//                    }
-//                },
-//                State {
-//                    name: "ERROR"
-//                    PropertyChanges {
-//                        target: firstName;
-//                        background: rectError
-//                    }
-//                }
-//            ]
+        }
 
-//        }
-//        TextField {
-//            id: lastName
-//            width: 300
-//            placeholderText: "Nom"
-//        }
-//        TextField {
-//            id: phone
-//            width: 300
-//            placeholderText: "Téléphone"
-//        }
-//        Button {
-//            text: "Valider"
-//            width: 300
-//            onClicked: () => {
+        TextField {
+            id: firstName
+            width: 300
+            placeholderText: "Prénom"
+            states: [
+                State {
+                    name: "NORMAL"
+                    PropertyChanges {
+                        target: firstName;
+                        color: "green"
+                    }
+                },
+                State {
+                    name: "ERROR"
+                    PropertyChanges {
+                        target: firstName;
+                        background: rectError
+                    }
+                }
+            ]
 
-//                           if(firstName.text == "" || lastName.text == "" || phone.text == "") {
-//                               message.color = "red"
-//                               message.text = "Merci de saisir la totalité des champs"
-//                               //firstName.background = rectError
-//                               //lastName.background = rectError
-//                               //phone.background = rectError
-//                               firstName.state = "ERROR"
-//                           }
-//                           else {
-//                               firstName.state = "NORMAL"
-//                               message.color = "green"
-//                               message.text = firstName.text + " "+ lastName.text + " "+phone.text
-//                           }
-//                       }
-//        }
-//    }
+        }
+        TextField {
+            id: lastName
+            width: 300
+            placeholderText: "Nom"
+        }
+        TextField {
+            id: phone
+            width: 300
+            placeholderText: "Téléphone"
+        }
+        Button {
+            text: "Valider"
+            width: 300
+            onClicked: () => {
+
+                           if(firstName.text == "" || lastName.text == "" || phone.text == "") {
+                               message.color = "red"
+                               message.text = "Merci de saisir la totalité des champs"
+                               //firstName.background = rectError
+                               //lastName.background = rectError
+                               //phone.background = rectError
+                               firstName.state = "ERROR"
+                           }
+                           else {
+                               firstName.state = "NORMAL"
+                               message.color = "green"
+                               message.text = firstName.text + " "+ lastName.text + " "+phone.text
+                               contactModel.append({firstName: firstName.text, lastName: lastName.text, phone: phone.text})
+                           }
+                       }
+        }
+
+        ListView {
+            id: fieldsList
+            model: contactModel
+            width: 300
+            height: 100
+            delegate: Row {
+                spacing: 10
+                Text {
+                    text: firstName
+                }
+                Text {
+                    text: lastName
+                }
+                Text {
+                    text: phone
+                }
+            }
+        }
+    }
 }
