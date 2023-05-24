@@ -5,16 +5,16 @@ ListView {
     model: contactModel
     width: 300
     height: 100
-    delegate: Row {
-        spacing: 10
-        Text {
-            text: firstName
-        }
-        Text {
-            text: lastName
-        }
-        Text {
-            text: phone
-        }
-    }
+//    delegate: Row {
+//        spacing: 10
+//        Text {
+//            text: firstName
+//        }
+//        Text {
+//            text: lastName
+//        }
+//        Text {
+//            text: phone
+//        }
+//    }
 }

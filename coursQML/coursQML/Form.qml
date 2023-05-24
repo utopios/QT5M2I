@@ -62,7 +62,7 @@ Column {
                            firstName.state = "NORMAL"
                            message.color = "green"
                            message.text = firstName.text + " "+ lastName.text + " "+phone.text
-                           contactModel.append({firstName: firstName.text, lastName: lastName.text, phone: phone.text})
+                           contactModel.addRecord(firstName.text, lastName.text, phone.text)
                        }
                    }
     }
