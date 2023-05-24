@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+
 import QtQuick.Layouts 1.15
 import "functions.js" as ScriptFunctions
 Window {
@@ -109,10 +110,17 @@ Window {
             id: message
         }
 
+        Rectangle {
+            id: rectError
+            border.color: "red"
+
+        }
+
         TextField {
             id: firstName
             width: 300
             placeholderText: "Prénom"
+
         }
         TextField {
             id: lastName
@@ -132,6 +140,9 @@ Window {
                            if(firstName.text == "" || lastName.text == "" || phone.text == "") {
                                message.color = "red"
                                message.text = "Merci de saisir la totalité des champs"
+                               firstName.background = rectError
+                               lastName.background = rectError
+                               phone.background = rectError
                            }
                            else {
                                message.color = "green"
