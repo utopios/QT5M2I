@@ -93,6 +93,8 @@ Window {
                  ListView {
                      id: fieldsList
                      model: fieldModel
+                     width: 300
+                     height: 200
                      delegate: Text {
                          text: name
                      }
