@@ -64,6 +64,9 @@ Window {
               text: "Button 1"
               Layout.row: 0
               Layout.column: 1
+              onClicked: () => {
+                  console.log("Hello From button with click on javascript")
+              }
           }
 
           Button {
