@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import "functions.js" as ScriptFunctions
 Window {
     width: 640
     height: 480
@@ -61,11 +62,15 @@ Window {
           columns: 3
           rows: 4
           Button {
-              text: "Button 1"
+              text: "1"
               Layout.row: 0
               Layout.column: 1
               onClicked: () => {
-                  console.log("Hello From button with click on javascript")
+                  let number = parseInt(this.text);
+//                  number++;
+//                  this.text = number.toString();
+//                  console.log("Hello From button with click on javascript");
+                   this.text = ScriptFunctions.increase(number).toString()
               }
           }
 
