@@ -112,6 +112,7 @@ Window {
 
         Rectangle {
             id: rectError
+            //width:300
             border.color: "red"
 
         }
@@ -120,6 +121,22 @@ Window {
             id: firstName
             width: 300
             placeholderText: "Prénom"
+            states: [
+                State {
+                    name: "NORMAL"
+                    PropertyChanges {
+                        target: firstName;
+                        color: ""
+                    }
+                },
+                State {
+                    name: "ERROR"
+                    PropertyChanges {
+                        target: firstName;
+                        background: rectError
+                    }
+                }
+            ]
 
         }
         TextField {
@@ -140,11 +157,13 @@ Window {
                            if(firstName.text == "" || lastName.text == "" || phone.text == "") {
                                message.color = "red"
                                message.text = "Merci de saisir la totalité des champs"
-                               firstName.background = rectError
-                               lastName.background = rectError
-                               phone.background = rectError
+                               //firstName.background = rectError
+                               //lastName.background = rectError
+                               //phone.background = rectError
+                               firstName.state = "ERROR"
                            }
                            else {
+                               firstName.state = "NORMAL"
                                message.color = "green"
                                message.text = firstName.text + " "+ lastName.text + " "+phone.text
                            }
