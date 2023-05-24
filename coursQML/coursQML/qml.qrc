@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>functions.js</file>
+        <file>Form.qml</file>
+        <file>ListContacts.qml</file>
     </qresource>
 </RCC>

@@ -155,88 +155,15 @@ Window {
         }
 
         anchors.centerIn: parent
-        Text {
-            id: message
-        }
 
-        Rectangle {
-            id: rectError
-            //width:300
-            border.color: "red"
+        Form {
 
         }
 
-        TextField {
-            id: firstName
-            width: 300
-            placeholderText: "Prénom"
-            states: [
-                State {
-                    name: "NORMAL"
-                    PropertyChanges {
-                        target: firstName;
-                        color: "green"
-                    }
-                },
-                State {
-                    name: "ERROR"
-                    PropertyChanges {
-                        target: firstName;
-                        background: rectError
-                    }
-                }
-            ]
+        ListContacts {
 
         }
-        TextField {
-            id: lastName
-            width: 300
-            placeholderText: "Nom"
-        }
-        TextField {
-            id: phone
-            width: 300
-            placeholderText: "Téléphone"
-        }
-        Button {
-            text: "Valider"
-            width: 300
-            onClicked: () => {
 
-                           if(firstName.text == "" || lastName.text == "" || phone.text == "") {
-                               message.color = "red"
-                               message.text = "Merci de saisir la totalité des champs"
-                               //firstName.background = rectError
-                               //lastName.background = rectError
-                               //phone.background = rectError
-                               firstName.state = "ERROR"
-                           }
-                           else {
-                               firstName.state = "NORMAL"
-                               message.color = "green"
-                               message.text = firstName.text + " "+ lastName.text + " "+phone.text
-                               contactModel.append({firstName: firstName.text, lastName: lastName.text, phone: phone.text})
-                           }
-                       }
-        }
-
-        ListView {
-            id: fieldsList
-            model: contactModel
-            width: 300
-            height: 100
-            delegate: Row {
-                spacing: 10
-                Text {
-                    text: firstName
-                }
-                Text {
-                    text: lastName
-                }
-                Text {
-                    text: phone
-                }
-            }
-        }
     }
+
 }
