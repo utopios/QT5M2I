@@ -57,28 +57,49 @@ Window {
 //            text: "Button 3"
 //        }
 //    }
-      GridLayout {
-          anchors.centerIn: parent
-          columns: 3
-          rows: 4
-          Button {
-              text: "1"
-              Layout.row: 0
-              Layout.column: 1
-              onClicked: () => {
-                  let number = parseInt(this.text);
-//                  number++;
-//                  this.text = number.toString();
-//                  console.log("Hello From button with click on javascript");
-                   this.text = ScriptFunctions.increase(number).toString()
-              }
-          }
+//      GridLayout {
+//          anchors.centerIn: parent
+//          columns: 3
+//          rows: 4
+//          Button {
+//              text: "1"
+//              Layout.row: 0
+//              Layout.column: 1
+//              onClicked: () => {
+//                  let number = parseInt(this.text);
+////                  number++;
+////                  this.text = number.toString();
+////                  console.log("Hello From button with click on javascript");
+//                   this.text = ScriptFunctions.increase(number).toString()
+//              }
+//          }
 
-          Button {
-              text: "Button 2"
-              Layout.row: 1
-              Layout.column: 0
-          }
-      }
-
+//          Button {
+//              text: "Button 2"
+//              Layout.row: 1
+//              Layout.column: 0
+//          }
+//      }
+     ColumnLayout {
+         anchors.centerIn: parent
+         Row {
+             Text {
+                 text: "Field 1"
+             }
+             TextField {
+                 id: field1
+                 width: 200
+                 placeholderText: "Text Field 1"
+             }
+         }
+         Row {
+             Button {
+                 text: "b1"
+                 onClicked: () => {
+                                console.log(field1.text)
+                                field1.text = ""
+                            }
+             }
+         }
+     }
 }
