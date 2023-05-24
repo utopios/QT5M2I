@@ -80,26 +80,64 @@ Window {
 //              Layout.column: 0
 //          }
 //      }
-     ColumnLayout {
-         anchors.centerIn: parent
-         Row {
-             Text {
-                 text: "Field 1"
-             }
-             TextField {
-                 id: field1
-                 width: 200
-                 placeholderText: "Text Field 1"
-             }
-         }
-         Row {
-             Button {
-                 text: "b1"
-                 onClicked: () => {
-                                console.log(field1.text)
-                                field1.text = ""
-                            }
-             }
-         }
-     }
+//     ColumnLayout {
+//         anchors.centerIn: parent
+//         Row {
+//             Text {
+//                 text: "Field 1"
+//             }
+//             TextField {
+//                 id: field1
+//                 width: 200
+//                 placeholderText: "Text Field 1"
+//             }
+//         }
+//         Row {
+//             Button {
+//                 text: "b1"
+//                 onClicked: () => {
+//                                console.log(field1.text)
+//                                field1.text = ""
+//                            }
+//             }
+//         }
+//     }
+    //Correction Contact Form
+    ColumnLayout {
+        anchors.centerIn: parent
+        Text {
+            id: message
+        }
+
+        TextField {
+            id: firstName
+            width: 300
+            placeholderText: "Prénom"
+        }
+        TextField {
+            id: lastName
+            width: 300
+            placeholderText: "Nom"
+        }
+        TextField {
+            id: phone
+            width: 300
+            placeholderText: "Téléphone"
+        }
+        Button {
+            text: "Valider"
+            width: 300
+            onClicked: () => {
+
+                           if(firstName.text == "" || lastName.text == "" || phone.text == "") {
+                               message.color = "red"
+                               message.text = "Merci de saisir la totalité des champs"
+                           }
+                           else {
+                               message.color = "green"
+                               message.text = firstName.text + " "+ lastName.text + " "+phone.text
+                           }
+                       }
+        }
+    }
 }
