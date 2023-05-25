@@ -1,4 +1,4 @@
-#include "bookmodel.h".h"
+#include "bookmodel.h"
 #include <QSqlRecord>
 
 BookModel::~BookModel() {
