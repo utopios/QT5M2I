@@ -4,5 +4,7 @@
         <file>functions.js</file>
         <file>Form.qml</file>
         <file>ListContacts.qml</file>
+        <file>FormBook.qml</file>
+        <file>ListBooks.qml</file>
     </qresource>
 </RCC>

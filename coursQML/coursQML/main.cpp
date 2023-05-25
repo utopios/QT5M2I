@@ -8,6 +8,7 @@
 #include <QSqlQuery>
 #include <QSqlTableModel>
 #include "contactmodel.h"
+#include "bookmodel.h"
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -34,9 +35,11 @@ int main(int argc, char *argv[])
 //    model->setTable("contact");
 //    model->select();
 
-    ContactModel* model = new ContactModel(&app);
+    //ContactModel* model = new ContactModel(&app);
+    BookModel* bookModel = new BookModel(&app);
 
-    engine.rootContext()->setContextProperty("contactModel", model);
+    //engine.rootContext()->setContextProperty("contactModel", model);
+    engine.rootContext()->setContextProperty("bookModel", bookModel);
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
         &app, [url](QObject *obj, const QUrl &objUrl) {
