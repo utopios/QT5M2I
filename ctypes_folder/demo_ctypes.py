@@ -1,6 +1,6 @@
 import ctypes
 
-lib = ctypes.cdll.LoadLibrary("./c_librairies/linux/demo.so")
+lib = ctypes.cdll.LoadLibrary("./c_librairies/linux/demox86.so")
 ###pour windows
 # lib = ctypes.windll.LoadLibrary("./c_librairies/windows/demo.dll")
 
